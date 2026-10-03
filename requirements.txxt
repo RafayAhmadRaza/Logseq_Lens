@@ -1,0 +1,26 @@
+# LLM / RAG
+langchain
+langchain-community
+langchain-core
+
+# LangGraph
+langgraph
+
+# MCP
+mcp
+
+# Embeddings / vector search
+sentence-transformers
+faiss-cpu
+
+# Environment variables
+python-dotenv
+
+# UI
+streamlit
+
+# Conversation / data handling
+pydantic
+
+# Observability
+langsmith
