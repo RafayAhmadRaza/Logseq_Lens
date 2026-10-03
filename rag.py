@@ -1,10 +1,14 @@
 
+from langchain_core.embeddings import embeddings
 import os
 from pathlib import Path
 
 import LogseqMarkdownParser
 from dotenv import load_dotenv
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_chroma import Chroma
+
 
 
 
@@ -61,6 +65,22 @@ def chunk_documents(docs):
     
     return chunked_documents
 
+def store_embedding_documents(docs):
+    """Embed and store documents in Chroma."""
+
+    embeddings = HuggingFaceEmbeddings(
+        model_name="sentence-transformers/all-mpnet-base-v2"
+    )
+
+    vector_store = Chroma(
+        collection_name="logseq_docs",
+        embedding_function=embeddings,
+        persist_directory="./chroma_logseq_db"
+    )
+
+    vector_store.add_documents(docs)
+
+    return vector_store
 
 
 if __name__ == "__main__":
@@ -72,4 +92,4 @@ if __name__ == "__main__":
     docs = load_logseq_graph(path)
     structured_docs = parse_documents(docs)
     chunked_docs=chunk_documents(structured_docs)
-    print(chunked_docs)
+    vector_store = store_embedding_documents(chunked_docs)
