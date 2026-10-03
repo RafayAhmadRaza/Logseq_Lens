@@ -4,7 +4,7 @@ from pathlib import Path
 
 import LogseqMarkdownParser
 from dotenv import load_dotenv
-
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
 
@@ -35,11 +35,31 @@ def parse_documents(docs):
     documents = []
     for doc in docs:
         page = LogseqMarkdownParser.parse_text(doc["content"])
-        documents.append(page.dict())
+        document = page.dict()
+        document["source"] = str(doc)
+        documents.append(document)
 
 
     return documents
     
+def chunk_documents(docs):
+    """Chunks documents"""
+
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=1000,
+        chunk_overlap=25,
+    )
+    chunked_documents = []
+    for doc in docs:
+        metadata = {
+            "source":doc['source']
+        }
+        texts = text_splitter.create_documents(
+            [doc['page_content']],
+            metadatas=[metadata])
+        chunked_documents.extend(texts)
+    
+    return chunked_documents
 
 
 
@@ -51,3 +71,5 @@ if __name__ == "__main__":
 
     docs = load_logseq_graph(path)
     structured_docs = parse_documents(docs)
+    chunked_docs=chunk_documents(structured_docs)
+    print(chunked_docs)
