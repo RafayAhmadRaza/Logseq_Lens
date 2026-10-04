@@ -12,7 +12,7 @@
 
 ~~7. Hybrid retrieval~~
 
-8. LangChain Rag
+~~8. LangChain Rag~~
 
 9. Prompts structured output
 

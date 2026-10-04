@@ -20,6 +20,13 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_ollama import ChatOllama
 
 import hashlib
+import re
+
+
+
+embeddings = HuggingFaceEmbeddings(
+        model_name="sentence-transformers/all-mpnet-base-v2"
+    )
 
 llm = ChatOllama(
     model="gemma4:e4b",
@@ -134,9 +141,6 @@ def chunk_documents(docs):
 def store_embedding_documents(docs):
     """Embed and store documents in Chroma."""
 
-    embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-mpnet-base-v2"
-    )
 
     vector_store = Chroma(
         collection_name="logseq_docs",
@@ -155,9 +159,6 @@ def store_embedding_documents(docs):
 def get_db():
     path =Path("./chroma_logseq_db") 
 
-    embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-mpnet-base-v2"
-    )
 
     vector_store = Chroma(
         collection_name="logseq_docs",
@@ -178,7 +179,7 @@ def sync(docs):
     to_delete = []
 
     if Path("./chroma_logseq_db").exists():
-        print("Exists")
+        # print("Exists")
 
         vector_store = get_db()
         existing = vector_store._collection.get(
@@ -200,12 +201,13 @@ def sync(docs):
             new_hash = chunk.metadata["content_hash"]
 
             if stable_id not in existing_docs:
-                print("ADD:",stable_id)
+                # print("ADD:",stable_id)
                 to_add.append(chunk)
             elif existing_docs[stable_id] == new_hash:
-                print("SKIP",stable_id)
+                # print("SKIP",stable_id)
+                continue
             else:
-                print("UPDATE: ",stable_id)
+                # print("UPDATE: ",stable_id)
                 to_update.append(chunk)
         
         for stable_id in existing_docs:
@@ -297,16 +299,38 @@ def populate_keyword_db(docs):
 
     db.commit()
     db.close()
+
 def keyword_search(query, k=5):
     db = get_keyword_db()
 
-    # Convert natural-language query into safe FTS5 terms
-    terms = query.replace('"', '').split()
+    terms = re.findall(r"\b[\w]+\b", query.lower())
 
-    # Keep only words that contain letters/numbers
+    stopwords = {
+        "what",
+        "is",
+        "are",
+        "do",
+        "does",
+        "did",
+        "i",
+        "me",
+        "my",
+        "the",
+        "a",
+        "an",
+        "to",
+        "of",
+        "for",
+        "how",
+        "much",
+        "many",
+        "need",
+    }
+
     terms = [
-        term for term in terms
-        if any(char.isalnum() for char in term)
+        term
+        for term in terms
+        if term not in stopwords
     ]
 
     if not terms:
@@ -343,16 +367,7 @@ def keyword_search(query, k=5):
         for stable_id, source, chunk_index, content in results
     ]
 def semantic_search(query:str, k=5):
-    """Search Logseq documents usi        vector_store.add_documents(
-                    documents=to_add,
-                    ids=[
-                        chunk.metadata["stable_id"]
-                        for chunk in to_add
-                    ]
-                )
-
-        ng semantic similarity."""
-
+    """Search Logseq documents using semantic similarity"""
     vector_store = get_db()
 
     results = vector_store.similarity_search(
@@ -361,6 +376,24 @@ def semantic_search(query:str, k=5):
     )
 
     return results
+
+def semantic_search_debug(query: str, k=10):
+    vector_store = get_db()
+
+    results = vector_store.similarity_search_with_score(
+        query,
+        k=k
+    )
+
+    for i, (doc, score) in enumerate(results, 1):
+        print(f"\n--- RESULT {i} ---")
+        print(f"Score: {score}")
+        print(f"Source: {doc.metadata['source']}")
+        print(f"Chunk: {doc.metadata['chunk_index']}")
+        print(f"ID: {doc.metadata['stable_id']}")
+        print(doc.page_content[:500])
+
+    return [doc for doc, score in results]
 
 def search(query, k=5, rrf_k=60):
     """Hybrid search using Reciprocal Rank Fusion."""
@@ -404,11 +437,16 @@ def search(query, k=5, rrf_k=60):
     ]
 
 def keyword_add(docs):
-    """Adds new documents to the keyword search database."""
-
     db = get_keyword_db()
 
     for doc in docs:
+        stable_id = doc.metadata["stable_id"]
+
+        db.execute(
+            "DELETE FROM documents WHERE stable_id = ?",
+            (stable_id,)
+        )
+
         db.execute(
             """
             INSERT INTO documents
@@ -416,7 +454,7 @@ def keyword_add(docs):
             VALUES (?, ?, ?, ?)
             """,
             (
-                doc.metadata["stable_id"],
+                stable_id,
                 doc.metadata["source"],
                 doc.metadata["chunk_index"],
                 doc.page_content
@@ -425,7 +463,6 @@ def keyword_add(docs):
 
     db.commit()
     db.close()
-
 
 def keyword_update(docs):
     """Updates existing documents in the keyword search database."""
@@ -483,6 +520,10 @@ def rag(query, k=5):
     documents = search(query, k)
 
     context = build_context(documents)
+    print("\n===== CONTEXT =====")
+    print(context)
+    print("===================\n")
+
 
     answer = rag_chain.invoke({
         "context": context,
@@ -502,15 +543,56 @@ if __name__ == "__main__":
     structured_docs = parse_documents(docs)
     sync(structured_docs)
 
-    result = rag(
-        "Find Yelan's built materials and tell me how much I have completed."
-    )
+    queries = [
+        "What materials do I need to level Yelan?",
+        "How much Mora does Yelan need?",
+        "What materials does Yelan need?",
+        "What is an EBS volume?",
+        "What is an EBS snapshot?",
+        "How does EC2 storage work?",
+        "How do I use Linux?",
+        "What Linux distribution am I using?",
+        "What is Chroma DB?",
+    ]
 
-    print("\nANSWER:")
-    print(result["answer"])
+    for query in queries:
 
-    print("\nSOURCES:")
+        print("\n" + "=" * 80)
+        print(f"QUERY: {query}")
+        print("=" * 80)
 
-    for doc in result["documents"]:
-        print("----")
-        print(doc.metadata["source"])
+        # ---------- FTS ----------
+        print("\n===== FTS =====")
+
+        fts_results = keyword_search(query, k=5)
+
+        for i, doc in enumerate(fts_results, 1):
+            print(
+                f"{i}. "
+                f"{doc.metadata['source']} "
+                f"(chunk {doc.metadata['chunk_index']})"
+            )
+
+        # ---------- VECTOR ----------
+        print("\n===== VECTOR =====")
+
+        vector_results = semantic_search_debug(
+            query,
+            k=5
+        )
+
+        # ---------- HYBRID / RAG ----------
+        print("\n===== RAG =====")
+
+        result = rag(query, k=5)
+
+        print("\n===== ANSWER =====")
+        print(result["answer"])
+
+        print("\n===== SOURCES =====")
+
+        for doc in result["documents"]:
+            print(
+                f"- {doc.metadata['source']} "
+                f"(chunk {doc.metadata['chunk_index']})"
+            )
