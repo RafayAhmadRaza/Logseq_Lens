@@ -1,0 +1,2193 @@
+
+================================================================================
+QUERY: What materials do I need to level Yelan?
+================================================================================
+
+===== FTS =====
+1. /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md (chunk 0)
+2. /home/rafayahmadraza/Logseq/pages/Kuki.md (chunk 0)
+3. /home/rafayahmadraza/Logseq/pages/Fischl.md (chunk 0)
+4. /home/rafayahmadraza/Logseq/pages/Genshin Character Stuff.md (chunk 0)
+5. /home/rafayahmadraza/Logseq/pages/Yelan.md (chunk 0)
+
+===== VECTOR =====
+
+--- RESULT 1 ---
+Score: 1.1348837614059448
+Source: /home/rafayahmadraza/Logseq/pages/Kuki.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/Kuki.md:0
+- ## Character Material Count:
+	- [MAT1]:Done
+	- [MAT2]:Done
+	- [MAT3]:Done
+	- Level:80/90 important to reach 90
+- ## Character weapon Material Count:
+	- [Chunk Of Aerosiderite]:1/4
+	- [Fossilized Bone Shard]:14/18
+	- [Energy Necter]:3/12
+- ## Talents Material Count:
+	- [Philosophies of Elegance]: 0/12
+	- [Spectral Nucleus]:0/9
+	- [Radien Shogun Boss]:0/2
+
+--- RESULT 2 ---
+Score: 1.2561979293823242
+Source: /home/rafayahmadraza/Logseq/pages/Fischl.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/Fischl.md:0
+- Talent Stuff: LVL 90>Skill>Burst
+	- Level = 89 close to 90 :)
+	- ## Character Material Count:
+		- Hero's wit: 170/~172 Done
+		- Mora: 2.8/~2.8M Done
+		- Firm Arrowhead:6/6 Done
+		- Sharp Arrowhead:24/34
+		- Weathered Arrowhead:24/53
+		- Small Lamp Grass:60/60 Done
+		- Lightning Prism:20/20 Done
+		- Vajrada Amethyst Gemstone:6/6 Done
+		- Teachings Of Ballad:3/3
+		- Guide to Ballad:13/21
+		- Philosophies of Ballad(Wednesday/Saturday/Sunday):0/48
+		- Spirit Locket of Boreas:2/6
+		- Black Crystal 
+
+--- RESULT 3 ---
+Score: 1.4324042797088623
+Source: /home/rafayahmadraza/Logseq/pages/Goals Y2.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/Goals Y2.md:0
+- Finish the [[Adventure Guild]] Goal
+-
+- Build Big Coop Done
+  collapsed:: true
+	- 10K
+	- 400 wood Done
+	- 150 Stone Done
+- Build Barn Done
+  collapsed:: true
+	- 6K Done
+	- 350 wood Done
+	- 150 stone Done
+- Build Deluxe Barn Done
+  collapsed:: true
+	- 12k
+- Build Biggest Barn for Sheep.
+- Build Fishing Pond
+
+--- RESULT 4 ---
+Score: 1.4809963703155518
+Source: /home/rafayahmadraza/Logseq/pages/Yelan.md
+Chunk: 1
+ID: /home/rafayahmadraza/Logseq/pages/Yelan.md:1
+- TODO {{renderer :todomaster}}
+			- DONE Mystic Enhancement Ore: ~605
+			- TODO Mora: ~754k
+			- TODO Whopperflower Nectar: 0/10
+			- TODO Shimmering Nectar: 0/15
+			- TODO Energy Nectar: 0/18
+			- TODO Chaos Device: 0/15
+			- TODO Chaos Circuit: 0/18
+			- TODO Chaos Core: 0/27
+			- TODO {Fetters of the Dandelion: 0/3 Chains of the Dandelion Gladiator:0/9 Shackles of the Dandelion Gladiator:0/9 Dream of the Dandelion Gladiator:0/4} (Wed/Sat/Sun)
+	- ## Infographic
+		- ![Yelan_5.5_-_euphorysm_ceg
+
+--- RESULT 5 ---
+Score: 1.5251731872558594
+Source: /home/rafayahmadraza/Logseq/pages/Second Playthrough.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/Second Playthrough.md:0
+- [[Goals Y1]]
+- ## Year 2
+	- [[Goals Y2]]
+	- [[Character Goals Y2]]
+-
+- ## Note
+	- Go to the secret woods with maple syrup Done
+
+===== RAG =====
+
+===== CONTEXT =====
+[Source 1]
+Source: /home/rafayahmadraza/Logseq/pages/Kuki.md
+- ## Character Material Count:
+	- [MAT1]:Done
+	- [MAT2]:Done
+	- [MAT3]:Done
+	- Level:80/90 important to reach 90
+- ## Character weapon Material Count:
+	- [Chunk Of Aerosiderite]:1/4
+	- [Fossilized Bone Shard]:14/18
+	- [Energy Necter]:3/12
+- ## Talents Material Count:
+	- [Philosophies of Elegance]: 0/12
+	- [Spectral Nucleus]:0/9
+	- [Radien Shogun Boss]:0/2
+
+[Source 2]
+Source: /home/rafayahmadraza/Logseq/pages/Fischl.md
+- Talent Stuff: LVL 90>Skill>Burst
+	- Level = 89 close to 90 :)
+	- ## Character Material Count:
+		- Hero's wit: 170/~172 Done
+		- Mora: 2.8/~2.8M Done
+		- Firm Arrowhead:6/6 Done
+		- Sharp Arrowhead:24/34
+		- Weathered Arrowhead:24/53
+		- Small Lamp Grass:60/60 Done
+		- Lightning Prism:20/20 Done
+		- Vajrada Amethyst Gemstone:6/6 Done
+		- Teachings Of Ballad:3/3
+		- Guide to Ballad:13/21
+		- Philosophies of Ballad(Wednesday/Saturday/Sunday):0/48
+		- Spirit Locket of Boreas:2/6
+		- Black Crystal Horn:18/18 Done
+		- Scattered Piece of Decarabian's Dream(Monday/Thursday/Sunday):4/4
+	- [[Genshin Character Stuff]]
+-
+
+[Source 3]
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md
+- EBS Volume
+	- Elastic Block Store Volume
+	- Network drive attached to an instance
+	- Allows data to persist even after termination of an instance
+	- Mounted to one instance at a time. At ccp level
+	- Bound to specific availability zones.
+	- Like network usb sticks.
+	- Network Drive (not a physical drive)
+		- it uses the network to communicate to instance. so might have a delay
+		- it can be detached from one instance and attached to another one relatively quickly.
+		- Its locked to AZ
+			- it means an EBS volume in us-east-1a can not be used int us-east-1b
+			- you need to snapshot a volume to move it.
+		- It needs provisioned capacity that is size in GBs, and IOPS(Operations per seconds)
+			- billed for this
+			- can be increased
+		- Can be left unattached.
+		- Delete on Termination attribute
+			- Allows for deletion of volume when instance is terminated.
+				- By default root EBS is deleted when root is deleted
+
+[Source 4]
+Source: /home/rafayahmadraza/Logseq/pages/Goals Y2.md
+- Finish the [[Adventure Guild]] Goal
+-
+- Build Big Coop Done
+  collapsed:: true
+	- 10K
+	- 400 wood Done
+	- 150 Stone Done
+- Build Barn Done
+  collapsed:: true
+	- 6K Done
+	- 350 wood Done
+	- 150 stone Done
+- Build Deluxe Barn Done
+  collapsed:: true
+	- 12k
+- Build Biggest Barn for Sheep.
+- Build Fishing Pond
+
+[Source 5]
+Source: /home/rafayahmadraza/Logseq/pages/Yelan.md
+- TODO {{renderer :todomaster}}
+			- DONE Mystic Enhancement Ore: ~605
+			- TODO Mora: ~754k
+			- TODO Whopperflower Nectar: 0/10
+			- TODO Shimmering Nectar: 0/15
+			- TODO Energy Nectar: 0/18
+			- TODO Chaos Device: 0/15
+			- TODO Chaos Circuit: 0/18
+			- TODO Chaos Core: 0/27
+			- TODO {Fetters of the Dandelion: 0/3 Chains of the Dandelion Gladiator:0/9 Shackles of the Dandelion Gladiator:0/9 Dream of the Dandelion Gladiator:0/4} (Wed/Sat/Sun)
+	- ## Infographic
+		- ![Yelan_5.5_-_euphorysm_cege.png](../assets/Yelan_5.5_-_euphorysm_cege_1762969459442_0.png)
+	- [[Genshin Character Stuff]]
+-
+===================
+
+
+===== ANSWER =====
+Based on your notes for Yelan, the materials you need include:
+
+*   Mora: ~754k
+*   Whopperflower Nectar: 0/10
+*   Shimmering Nectar: 0/15
+*   Energy Nectar: 0/18
+*   Chaos Device: 0/15
+*   Chaos Circuit: 0/18
+*   Chaos Core: 0/27
+*   Fetters of the Dandelion: 0/3
+*   Chains of the Dandelion Gladiator: 0/9
+*   Shackles of the Dandelion Gladiator: 0/9
+*   Dream of the Dandelion Gladiator: 0/4
+
+===== SOURCES =====
+- /home/rafayahmadraza/Logseq/pages/Kuki.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/Fischl.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/Goals Y2.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/Yelan.md (chunk 1)
+
+================================================================================
+QUERY: How much Mora does Yelan need?
+================================================================================
+
+===== FTS =====
+1. /home/rafayahmadraza/Logseq/pages/Fischl.md (chunk 0)
+2. /home/rafayahmadraza/Logseq/pages/Genshin Character Stuff.md (chunk 0)
+3. /home/rafayahmadraza/Logseq/pages/Yelan.md (chunk 0)
+4. /home/rafayahmadraza/Logseq/pages/Yelan.md (chunk 1)
+
+===== VECTOR =====
+
+--- RESULT 1 ---
+Score: 1.381307601928711
+Source: /home/rafayahmadraza/Logseq/pages/Yelan.md
+Chunk: 1
+ID: /home/rafayahmadraza/Logseq/pages/Yelan.md:1
+- TODO {{renderer :todomaster}}
+			- DONE Mystic Enhancement Ore: ~605
+			- TODO Mora: ~754k
+			- TODO Whopperflower Nectar: 0/10
+			- TODO Shimmering Nectar: 0/15
+			- TODO Energy Nectar: 0/18
+			- TODO Chaos Device: 0/15
+			- TODO Chaos Circuit: 0/18
+			- TODO Chaos Core: 0/27
+			- TODO {Fetters of the Dandelion: 0/3 Chains of the Dandelion Gladiator:0/9 Shackles of the Dandelion Gladiator:0/9 Dream of the Dandelion Gladiator:0/4} (Wed/Sat/Sun)
+	- ## Infographic
+		- ![Yelan_5.5_-_euphorysm_ceg
+
+--- RESULT 2 ---
+Score: 1.3813235759735107
+Source: /home/rafayahmadraza/Logseq/pages/Yelan.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/Yelan.md:0
+- ### Resin Approx: 2020
+	- ### Days Approx: 12
+	- ## Character Material Count:
+	  id:: 4117c433-7648-4538-a73c-22fb4fada923
+		- TODO {{renderer :todomaster}}
+		  :LOGBOOK:
+		  CLOCK: [2025-11-13 Thu 00:00:35]--[2025-11-13 Thu 00:00:36] =>  00:00:01
+		  CLOCK: [2025-11-13 Thu 00:00:37]--[2025-11-13 Thu 00:00:37] =>  00:00:00
+		  CLOCK: [2025-11-13 Thu 00:00:38]--[2025-11-13 Thu 00:00:38] =>  00:00:00
+		  :END:
+			- TODO Hero's wit: 0/~213
+			- TODO Mora: ~3.4M
+			- TODO Recruit's Insignia:0/27
+	
+
+--- RESULT 3 ---
+Score: 1.3987056016921997
+Source: /home/rafayahmadraza/Logseq/pages/Fischl.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/Fischl.md:0
+- Talent Stuff: LVL 90>Skill>Burst
+	- Level = 89 close to 90 :)
+	- ## Character Material Count:
+		- Hero's wit: 170/~172 Done
+		- Mora: 2.8/~2.8M Done
+		- Firm Arrowhead:6/6 Done
+		- Sharp Arrowhead:24/34
+		- Weathered Arrowhead:24/53
+		- Small Lamp Grass:60/60 Done
+		- Lightning Prism:20/20 Done
+		- Vajrada Amethyst Gemstone:6/6 Done
+		- Teachings Of Ballad:3/3
+		- Guide to Ballad:13/21
+		- Philosophies of Ballad(Wednesday/Saturday/Sunday):0/48
+		- Spirit Locket of Boreas:2/6
+		- Black Crystal 
+
+--- RESULT 4 ---
+Score: 1.4159222841262817
+Source: /home/rafayahmadraza/Logseq/pages/Kuki.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/Kuki.md:0
+- ## Character Material Count:
+	- [MAT1]:Done
+	- [MAT2]:Done
+	- [MAT3]:Done
+	- Level:80/90 important to reach 90
+- ## Character weapon Material Count:
+	- [Chunk Of Aerosiderite]:1/4
+	- [Fossilized Bone Shard]:14/18
+	- [Energy Necter]:3/12
+- ## Talents Material Count:
+	- [Philosophies of Elegance]: 0/12
+	- [Spectral Nucleus]:0/9
+	- [Radien Shogun Boss]:0/2
+
+--- RESULT 5 ---
+Score: 1.4627538919448853
+Source: /home/rafayahmadraza/Logseq/pages/Template.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/Template.md:0
+template:: Journal
+journal-created:: true
+	- ### Thoughts to write
+	- ### what creative thing did you do today?
+	- ### Mood Tracking:
+		- Morning:
+		- Afternoon:
+		- Evening:
+		- Night:
+	- ## Idea Dumps(Only if you have them dont stress)
+	-
+- # Material Information
+  template:: GeshinTemplate
+	- ### Resin Approx:
+	- ### Days Approx
+	-
+	- ## Character Material Count:
+	  id:: 6912fda9-ea4f-4b7a-b04d-761ec072de78
+		- TODO {{renderer :todomaster}}
+			- TODO
+	- ## Weapon Material Count:
+		- TODO {{re
+
+===== RAG =====
+
+===== CONTEXT =====
+[Source 1]
+Source: /home/rafayahmadraza/Logseq/pages/Fischl.md
+- Talent Stuff: LVL 90>Skill>Burst
+	- Level = 89 close to 90 :)
+	- ## Character Material Count:
+		- Hero's wit: 170/~172 Done
+		- Mora: 2.8/~2.8M Done
+		- Firm Arrowhead:6/6 Done
+		- Sharp Arrowhead:24/34
+		- Weathered Arrowhead:24/53
+		- Small Lamp Grass:60/60 Done
+		- Lightning Prism:20/20 Done
+		- Vajrada Amethyst Gemstone:6/6 Done
+		- Teachings Of Ballad:3/3
+		- Guide to Ballad:13/21
+		- Philosophies of Ballad(Wednesday/Saturday/Sunday):0/48
+		- Spirit Locket of Boreas:2/6
+		- Black Crystal Horn:18/18 Done
+		- Scattered Piece of Decarabian's Dream(Monday/Thursday/Sunday):4/4
+	- [[Genshin Character Stuff]]
+-
+
+[Source 2]
+Source: /home/rafayahmadraza/Logseq/pages/Yelan.md
+- TODO {{renderer :todomaster}}
+			- DONE Mystic Enhancement Ore: ~605
+			- TODO Mora: ~754k
+			- TODO Whopperflower Nectar: 0/10
+			- TODO Shimmering Nectar: 0/15
+			- TODO Energy Nectar: 0/18
+			- TODO Chaos Device: 0/15
+			- TODO Chaos Circuit: 0/18
+			- TODO Chaos Core: 0/27
+			- TODO {Fetters of the Dandelion: 0/3 Chains of the Dandelion Gladiator:0/9 Shackles of the Dandelion Gladiator:0/9 Dream of the Dandelion Gladiator:0/4} (Wed/Sat/Sun)
+	- ## Infographic
+		- ![Yelan_5.5_-_euphorysm_cege.png](../assets/Yelan_5.5_-_euphorysm_cege_1762969459442_0.png)
+	- [[Genshin Character Stuff]]
+-
+
+[Source 3]
+Source: /home/rafayahmadraza/Logseq/pages/Yelan.md
+- ### Resin Approx: 2020
+	- ### Days Approx: 12
+	- ## Character Material Count:
+	  id:: 4117c433-7648-4538-a73c-22fb4fada923
+		- TODO {{renderer :todomaster}}
+		  :LOGBOOK:
+		  CLOCK: [2025-11-13 Thu 00:00:35]--[2025-11-13 Thu 00:00:36] =>  00:00:01
+		  CLOCK: [2025-11-13 Thu 00:00:37]--[2025-11-13 Thu 00:00:37] =>  00:00:00
+		  CLOCK: [2025-11-13 Thu 00:00:38]--[2025-11-13 Thu 00:00:38] =>  00:00:00
+		  :END:
+			- TODO Hero's wit: 0/~213
+			- TODO Mora: ~3.4M
+			- TODO Recruit's Insignia:0/27
+			- TODO Sergeant's Insignia:0/74
+			- TODO Lieutenant's Insignia:0/77
+			- TODO Starconch:102/165
+			- TODO Runic Fang:0/46
+			- TODO Varunda Lazurite Fragment:0/9
+			- TODO Varunada Lazurite Chunk:0/9
+			- TODO Varunada Lazurite Gemstone:0/6
+			- TODO {Teachings of Prosperity:0/6
+			- TODO Guide to Prosperity:0/42
+			- TODO Philosophies of Prosperity:0/48}(Monday/Thursday/Sunday)
+			- TODO Gilded Scale:0/8
+			- DONE Crown of Insight:1
+	- ## Weapon Material Count:
+
+[Source 4]
+Source: /home/rafayahmadraza/Logseq/pages/Genshin Character Stuff.md
+- |Character|Done|
+  |Fischl|✅|
+  |Nahida|❌|
+  |Furina|❌|
+  |Kuki|✅|
+  |Yelan|❌|
+  |Xiangling|❌|
+  |Wriosthely|❌|
+  |Ororon|❌|
+  |Lan Yang|❌|
+  |Rosaria|❌|
+  |Neuvillate|❌|
+  |Bennet|✅|
+  |Cheveruse|🔃|
+  |Mona|❌|
+- [[Infographics For Genshin Characters]]
+
+[Source 5]
+Source: /home/rafayahmadraza/Logseq/pages/Kuki.md
+- ## Character Material Count:
+	- [MAT1]:Done
+	- [MAT2]:Done
+	- [MAT3]:Done
+	- Level:80/90 important to reach 90
+- ## Character weapon Material Count:
+	- [Chunk Of Aerosiderite]:1/4
+	- [Fossilized Bone Shard]:14/18
+	- [Energy Necter]:3/12
+- ## Talents Material Count:
+	- [Philosophies of Elegance]: 0/12
+	- [Spectral Nucleus]:0/9
+	- [Radien Shogun Boss]:0/2
+===================
+
+
+===== ANSWER =====
+According to the notes, Yelan needs:
+
+*   ~754k Mora (from Source 2)
+*   ~3.4M Mora (from Source 3)
+
+===== SOURCES =====
+- /home/rafayahmadraza/Logseq/pages/Fischl.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/Yelan.md (chunk 1)
+- /home/rafayahmadraza/Logseq/pages/Yelan.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/Genshin Character Stuff.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/Kuki.md (chunk 0)
+
+================================================================================
+QUERY: What materials does Yelan need?
+================================================================================
+
+===== FTS =====
+1. /home/rafayahmadraza/Logseq/pages/Genshin Character Stuff.md (chunk 0)
+2. /home/rafayahmadraza/Logseq/pages/Yelan.md (chunk 0)
+3. /home/rafayahmadraza/Logseq/pages/Yelan.md (chunk 1)
+
+===== VECTOR =====
+
+--- RESULT 1 ---
+Score: 1.327300786972046
+Source: /home/rafayahmadraza/Logseq/pages/Kuki.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/Kuki.md:0
+- ## Character Material Count:
+	- [MAT1]:Done
+	- [MAT2]:Done
+	- [MAT3]:Done
+	- Level:80/90 important to reach 90
+- ## Character weapon Material Count:
+	- [Chunk Of Aerosiderite]:1/4
+	- [Fossilized Bone Shard]:14/18
+	- [Energy Necter]:3/12
+- ## Talents Material Count:
+	- [Philosophies of Elegance]: 0/12
+	- [Spectral Nucleus]:0/9
+	- [Radien Shogun Boss]:0/2
+
+--- RESULT 2 ---
+Score: 1.35679292678833
+Source: /home/rafayahmadraza/Logseq/pages/Sprirtfarer.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/Sprirtfarer.md:0
+- ~~~Elena's Lessons~~
+  collapsed:: true
+	- ~~Octopus 3 oxbury~~
+	- ~~Squid 3 Furogawa~~
+	- ~~Snow crab 3~~
+	- ~~Coffee beans 30~~
+	- ~~Tea leaves 30~~
+	- ~~Celery 24~~
+	- ~~Potato 22 seeds oxbury~~
+	- ~~Cetrine done~~
+	- ~~Hematite two more~~
+	- ~~Opal 3 more~~
+	- ~~Amethyst one more~~
+	- ~~Diamond three more~~
+	- ~~Elena's Home~~
+- Alice's Home
+- ~~Buck's Home~~
+- ~~Astrid's Home~~
+- ~~Yellowfin Tuna~~
+- ~~Redfin  Tuna~~
+- ~~Onion 3 Garlic 3~~
+- ~~Garlic 3 Tomato 3~~
+- [[Fishing Location]]
+- 
+
+--- RESULT 3 ---
+Score: 1.412842869758606
+Source: /home/rafayahmadraza/Logseq/pages/Yelan.md
+Chunk: 1
+ID: /home/rafayahmadraza/Logseq/pages/Yelan.md:1
+- TODO {{renderer :todomaster}}
+			- DONE Mystic Enhancement Ore: ~605
+			- TODO Mora: ~754k
+			- TODO Whopperflower Nectar: 0/10
+			- TODO Shimmering Nectar: 0/15
+			- TODO Energy Nectar: 0/18
+			- TODO Chaos Device: 0/15
+			- TODO Chaos Circuit: 0/18
+			- TODO Chaos Core: 0/27
+			- TODO {Fetters of the Dandelion: 0/3 Chains of the Dandelion Gladiator:0/9 Shackles of the Dandelion Gladiator:0/9 Dream of the Dandelion Gladiator:0/4} (Wed/Sat/Sun)
+	- ## Infographic
+		- ![Yelan_5.5_-_euphorysm_ceg
+
+--- RESULT 4 ---
+Score: 1.4243578910827637
+Source: /home/rafayahmadraza/Logseq/pages/Yelan.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/Yelan.md:0
+- ### Resin Approx: 2020
+	- ### Days Approx: 12
+	- ## Character Material Count:
+	  id:: 4117c433-7648-4538-a73c-22fb4fada923
+		- TODO {{renderer :todomaster}}
+		  :LOGBOOK:
+		  CLOCK: [2025-11-13 Thu 00:00:35]--[2025-11-13 Thu 00:00:36] =>  00:00:01
+		  CLOCK: [2025-11-13 Thu 00:00:37]--[2025-11-13 Thu 00:00:37] =>  00:00:00
+		  CLOCK: [2025-11-13 Thu 00:00:38]--[2025-11-13 Thu 00:00:38] =>  00:00:00
+		  :END:
+			- TODO Hero's wit: 0/~213
+			- TODO Mora: ~3.4M
+			- TODO Recruit's Insignia:0/27
+	
+
+--- RESULT 5 ---
+Score: 1.4384037256240845
+Source: /home/rafayahmadraza/Logseq/pages/Fischl.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/Fischl.md:0
+- Talent Stuff: LVL 90>Skill>Burst
+	- Level = 89 close to 90 :)
+	- ## Character Material Count:
+		- Hero's wit: 170/~172 Done
+		- Mora: 2.8/~2.8M Done
+		- Firm Arrowhead:6/6 Done
+		- Sharp Arrowhead:24/34
+		- Weathered Arrowhead:24/53
+		- Small Lamp Grass:60/60 Done
+		- Lightning Prism:20/20 Done
+		- Vajrada Amethyst Gemstone:6/6 Done
+		- Teachings Of Ballad:3/3
+		- Guide to Ballad:13/21
+		- Philosophies of Ballad(Wednesday/Saturday/Sunday):0/48
+		- Spirit Locket of Boreas:2/6
+		- Black Crystal 
+
+===== RAG =====
+
+===== CONTEXT =====
+[Source 1]
+Source: /home/rafayahmadraza/Logseq/pages/Yelan.md
+- ### Resin Approx: 2020
+	- ### Days Approx: 12
+	- ## Character Material Count:
+	  id:: 4117c433-7648-4538-a73c-22fb4fada923
+		- TODO {{renderer :todomaster}}
+		  :LOGBOOK:
+		  CLOCK: [2025-11-13 Thu 00:00:35]--[2025-11-13 Thu 00:00:36] =>  00:00:01
+		  CLOCK: [2025-11-13 Thu 00:00:37]--[2025-11-13 Thu 00:00:37] =>  00:00:00
+		  CLOCK: [2025-11-13 Thu 00:00:38]--[2025-11-13 Thu 00:00:38] =>  00:00:00
+		  :END:
+			- TODO Hero's wit: 0/~213
+			- TODO Mora: ~3.4M
+			- TODO Recruit's Insignia:0/27
+			- TODO Sergeant's Insignia:0/74
+			- TODO Lieutenant's Insignia:0/77
+			- TODO Starconch:102/165
+			- TODO Runic Fang:0/46
+			- TODO Varunda Lazurite Fragment:0/9
+			- TODO Varunada Lazurite Chunk:0/9
+			- TODO Varunada Lazurite Gemstone:0/6
+			- TODO {Teachings of Prosperity:0/6
+			- TODO Guide to Prosperity:0/42
+			- TODO Philosophies of Prosperity:0/48}(Monday/Thursday/Sunday)
+			- TODO Gilded Scale:0/8
+			- DONE Crown of Insight:1
+	- ## Weapon Material Count:
+
+[Source 2]
+Source: /home/rafayahmadraza/Logseq/pages/Yelan.md
+- TODO {{renderer :todomaster}}
+			- DONE Mystic Enhancement Ore: ~605
+			- TODO Mora: ~754k
+			- TODO Whopperflower Nectar: 0/10
+			- TODO Shimmering Nectar: 0/15
+			- TODO Energy Nectar: 0/18
+			- TODO Chaos Device: 0/15
+			- TODO Chaos Circuit: 0/18
+			- TODO Chaos Core: 0/27
+			- TODO {Fetters of the Dandelion: 0/3 Chains of the Dandelion Gladiator:0/9 Shackles of the Dandelion Gladiator:0/9 Dream of the Dandelion Gladiator:0/4} (Wed/Sat/Sun)
+	- ## Infographic
+		- ![Yelan_5.5_-_euphorysm_cege.png](../assets/Yelan_5.5_-_euphorysm_cege_1762969459442_0.png)
+	- [[Genshin Character Stuff]]
+-
+
+[Source 3]
+Source: /home/rafayahmadraza/Logseq/pages/Kuki.md
+- ## Character Material Count:
+	- [MAT1]:Done
+	- [MAT2]:Done
+	- [MAT3]:Done
+	- Level:80/90 important to reach 90
+- ## Character weapon Material Count:
+	- [Chunk Of Aerosiderite]:1/4
+	- [Fossilized Bone Shard]:14/18
+	- [Energy Necter]:3/12
+- ## Talents Material Count:
+	- [Philosophies of Elegance]: 0/12
+	- [Spectral Nucleus]:0/9
+	- [Radien Shogun Boss]:0/2
+
+[Source 4]
+Source: /home/rafayahmadraza/Logseq/pages/Genshin Character Stuff.md
+- |Character|Done|
+  |Fischl|✅|
+  |Nahida|❌|
+  |Furina|❌|
+  |Kuki|✅|
+  |Yelan|❌|
+  |Xiangling|❌|
+  |Wriosthely|❌|
+  |Ororon|❌|
+  |Lan Yang|❌|
+  |Rosaria|❌|
+  |Neuvillate|❌|
+  |Bennet|✅|
+  |Cheveruse|🔃|
+  |Mona|❌|
+- [[Infographics For Genshin Characters]]
+
+[Source 5]
+Source: /home/rafayahmadraza/Logseq/pages/Sprirtfarer.md
+- ~~~Elena's Lessons~~
+  collapsed:: true
+	- ~~Octopus 3 oxbury~~
+	- ~~Squid 3 Furogawa~~
+	- ~~Snow crab 3~~
+	- ~~Coffee beans 30~~
+	- ~~Tea leaves 30~~
+	- ~~Celery 24~~
+	- ~~Potato 22 seeds oxbury~~
+	- ~~Cetrine done~~
+	- ~~Hematite two more~~
+	- ~~Opal 3 more~~
+	- ~~Amethyst one more~~
+	- ~~Diamond three more~~
+	- ~~Elena's Home~~
+- Alice's Home
+- ~~Buck's Home~~
+- ~~Astrid's Home~~
+- ~~Yellowfin Tuna~~
+- ~~Redfin  Tuna~~
+- ~~Onion 3 Garlic 3~~
+- ~~Garlic 3 Tomato 3~~
+- [[Fishing Location]]
+- [[Recipe Location]]
+-
+===================
+
+
+===== ANSWER =====
+Based on your notes, here are the materials Yelan needs:
+
+**Character Material Count:**
+
+*   **From Source 1:**
+    *   Hero's wit: 0/~213
+    *   Mora: ~3.4M
+    *   Recruit's Insignia: 0/27
+    *   Sergeant's Insignia: 0/74
+    *   Lieutenant's Insignia: 0/77
+    *   Starconch: 102/165
+    *   Runic Fang: 0/46
+    *   Varunda Lazurite Fragment: 0/9
+    *   Varunada Lazurite Chunk: 0/9
+    *   Varunada Lazurite Gemstone: 0/6
+    *   Teachings of Prosperity: 0/6
+    *   Guide to Prosperity: 0/42
+    *   Philosophies of Prosperity: 0/48
+    *   Gilded Scale: 0/8
+*   **From Source 2:**
+    *   Mora: ~754k
+    *   Whopperflower Nectar: 0/10
+    *   Shimmering Nectar: 0/15
+    *   Energy Nectar: 0/18
+    *   Chaos Device: 0/15
+    *   Chaos Circuit: 0/18
+    *   Chaos Core: 0/27
+    *   Fetters of the Dandelion: 0/3
+    *   Chains of the Dandelion Gladiator: 0/9
+    *   Shackles of the Dandelion Gladiator: 0/9
+    *   Dream of the Dandelion Gladiator: 0/4
+
+**Weapon Material Count:**
+The notes list a section for Weapon Material Count, but no specific materials are provided.
+
+===== SOURCES =====
+- /home/rafayahmadraza/Logseq/pages/Yelan.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/Yelan.md (chunk 1)
+- /home/rafayahmadraza/Logseq/pages/Kuki.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/Genshin Character Stuff.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/Sprirtfarer.md (chunk 0)
+
+================================================================================
+QUERY: What is an EBS volume?
+================================================================================
+
+===== FTS =====
+1. /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md (chunk 0)
+2. /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md (chunk 1)
+3. /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md (chunk 0)
+4. /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md (chunk 1)
+5. /home/rafayahmadraza/Logseq/pages/AMI.md (chunk 0)
+
+===== VECTOR =====
+
+--- RESULT 1 ---
+Score: 0.6395779848098755
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md:0
+- EBS Volume
+	- Elastic Block Store Volume
+	- Network drive attached to an instance
+	- Allows data to persist even after termination of an instance
+	- Mounted to one instance at a time. At ccp level
+	- Bound to specific availability zones.
+	- Like network usb sticks.
+	- Network Drive (not a physical drive)
+		- it uses the network to communicate to instance. so might have a delay
+		- it can be detached from one instance and attached to another one relatively quickly.
+		- Its locked to AZ
+			- it 
+
+--- RESULT 2 ---
+Score: 0.8453791737556458
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md
+Chunk: 1
+ID: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md:1
+- By default any other attached EBS is not deleted(attribute  disabled)
+				- This can be control via Aws console or CLI
+				- It is used to preserve root volume when an instance is terminated.
+		- Exception
+			- IO1 and IO2 Volumes can be attached to multiple instances this feature is called EBS- Multi-Attach
+			- For Exam out of scope.
+		- Diagram
+			- ![image.png](../assets/image_1785091302629_0.png)
+		- Steps
+			- Open Instance
+			- Go To Storage Tab
+			- There is root device
+			- we have an
+
+--- RESULT 3 ---
+Score: 0.9155715107917786
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Store.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/EC2 Instance Store.md:0
+- EBS are network drives but they have limited performance to fix this we can attach a high-performance hardware disk which uses EC2 instance store
+- Connected to the server through physical connection.
+-
+- Used for
+	- Better I/O performance
+	- EC2 instance Store loses their storage if they're stopped (ephemeral)
+	- Good for buffer/cache/scratch data/ temporary content.
+	- Risk of data loss if hardware fails
+	- Backups and Replication are our responsiblity.
+- [[EFS]]
+-
+
+--- RESULT 4 ---
+Score: 0.9723408222198486
+Source: /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md:0
+- To Create a backup(snapshot) of an EBS volume at any point in time.
+- Not necessary to detach the volume but recommended to do so.
+- the snapshot can be copied across AZ or Region
+- ![image.png](../assets/image_1785091910185_0.png)
+- Features
+	- EBS Snapshot Archive
+		- Move a Snapshot to an 'archive tier' that is 75% cheaper.
+		- ![image.png](../assets/image_1785092044276_0.png)
+		- It takes 24 to 72 hours to restoring the archive
+		- it is best used in cases for snapshots that do not need to
+
+--- RESULT 5 ---
+Score: 1.0945696830749512
+Source: /home/rafayahmadraza/Logseq/pages/AMI.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/AMI.md:0
+- AMI = Amazon Machine Image
+- Customization of an EC2 Instance
+	- You add your own software, configuration, os, monitoring etc.
+	- Faster boot/ configuration time because all software is prepackaged.
+- AMI are built for specific region but can be copied across regions.
+- You can launch EC2 Instances from:
+	- A Public AMI: Aws providd
+	- Your own AMI: you make and maintain them yourself.
+	- An Aws Marketplace AMI: an AMI someone else made (and potentially sells)
+- Process
+	- Start an EC2 instanc
+
+===== RAG =====
+
+===== CONTEXT =====
+[Source 1]
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md
+- EBS Volume
+	- Elastic Block Store Volume
+	- Network drive attached to an instance
+	- Allows data to persist even after termination of an instance
+	- Mounted to one instance at a time. At ccp level
+	- Bound to specific availability zones.
+	- Like network usb sticks.
+	- Network Drive (not a physical drive)
+		- it uses the network to communicate to instance. so might have a delay
+		- it can be detached from one instance and attached to another one relatively quickly.
+		- Its locked to AZ
+			- it means an EBS volume in us-east-1a can not be used int us-east-1b
+			- you need to snapshot a volume to move it.
+		- It needs provisioned capacity that is size in GBs, and IOPS(Operations per seconds)
+			- billed for this
+			- can be increased
+		- Can be left unattached.
+		- Delete on Termination attribute
+			- Allows for deletion of volume when instance is terminated.
+				- By default root EBS is deleted when root is deleted
+
+[Source 2]
+Source: /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md
+- To Create a backup(snapshot) of an EBS volume at any point in time.
+- Not necessary to detach the volume but recommended to do so.
+- the snapshot can be copied across AZ or Region
+- ![image.png](../assets/image_1785091910185_0.png)
+- Features
+	- EBS Snapshot Archive
+		- Move a Snapshot to an 'archive tier' that is 75% cheaper.
+		- ![image.png](../assets/image_1785092044276_0.png)
+		- It takes 24 to 72 hours to restoring the archive
+		- it is best used in cases for snapshots that do not need to be restored in a rush
+	- Recycle Bin For EBS Snapshots
+		- by default snapshots are deleted fully but rules can be setup to retain deleted snapshots which allows for easier recovery in case of accidental removal.
+		- Specify retention time (from 1 day to 1 year)
+		- ![image.png](../assets/image_1785092165366_0.png)
+- Hands On Steps
+	- Actions
+	- Create a Snapshot
+	- Description whatever
+	- Side Bar has Snapshots
+	- Right Click to copy snapshot
+	- Select AZ where you want to send snapshot
+
+[Source 3]
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md
+- By default any other attached EBS is not deleted(attribute  disabled)
+				- This can be control via Aws console or CLI
+				- It is used to preserve root volume when an instance is terminated.
+		- Exception
+			- IO1 and IO2 Volumes can be attached to multiple instances this feature is called EBS- Multi-Attach
+			- For Exam out of scope.
+		- Diagram
+			- ![image.png](../assets/image_1785091302629_0.png)
+		- Steps
+			- Open Instance
+			- Go To Storage Tab
+			- There is root device
+			- we have an 8 gbs volume attched
+			- click on it
+			- we can see type, size, IOPS etc.
+			- To Create Volume
+				- Click Create Volume
+			- we can select any type but for the course select gp2
+			- select size as 2gbs
+			- then check availity zone on the 8gb volume
+			- select that az on the newly created volume.
+			- To attach the volume to any instance.
+				- Click Action
+				- Click On Attach Volume
+				- Select Instance
+				- Boom Connected
+			- [[EBS Snapshots]]
+			-
+			-
+
+[Source 4]
+Source: /home/rafayahmadraza/Logseq/pages/AMI.md
+- AMI = Amazon Machine Image
+- Customization of an EC2 Instance
+	- You add your own software, configuration, os, monitoring etc.
+	- Faster boot/ configuration time because all software is prepackaged.
+- AMI are built for specific region but can be copied across regions.
+- You can launch EC2 Instances from:
+	- A Public AMI: Aws providd
+	- Your own AMI: you make and maintain them yourself.
+	- An Aws Marketplace AMI: an AMI someone else made (and potentially sells)
+- Process
+	- Start an EC2 instance and customize it
+	- Stop the instance for data integrity
+	- Build an AMI this will create EBS snapshots
+	- Launch instances from other AMIs.
+- Diagram
+- ![image.png](../assets/image_1785092543139_0.png)
+- Steps
+	- First Launch an instance ie create an instance etc
+	- wait for it to initialize
+	- Right click
+		- Image and Template
+			- Create image
+				- Set Image Name
+				- Keep everything else default unless something required to be changed
+
+[Source 5]
+Source: /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md
+- Action create volume from snapshot allows you to recreate any snaphot.
+	- Snapshot has recycle bin which can be clicked to create a retention rule.
+	- you can set retention rule as well as set up rule lock which allows for deletion of the retention rule.
+	- From action you can do the archive snapshot as well
+	- Recycle Bin -> Resources has deleted snapshots you can right click and click restore it.
+	- [[AMI]]
+	-
+-
+===================
+
+
+===== ANSWER =====
+An EBS Volume (Elastic Block Store Volume) is a network drive attached to an instance.
+
+Key characteristics of an EBS Volume include:
+
+*   **Persistence:** It allows data to persist even after the termination of an instance.
+*   **Functionality:** It is a network drive (not a physical drive) that uses the network to communicate with the instance, which may result in a delay.
+*   **Attachment:** It can be mounted to one instance at a time (at the CCP level).
+*   **Zonal Binding:** It is bound to specific availability zones; for example, an EBS volume in us-east-1a cannot be used in us-east-1b without snapshotting.
+*   **Requirements:** It requires provisioned capacity, which is measured in GBs and IOPS (Operations per seconds), and this capacity is billed.
+*   **Management:** It can be left unattached, and it has a "Delete on Termination attribute" which allows for its deletion when the instance is terminated.
+
+===== SOURCES =====
+- /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md (chunk 1)
+- /home/rafayahmadraza/Logseq/pages/AMI.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md (chunk 1)
+
+================================================================================
+QUERY: What is an EBS snapshot?
+================================================================================
+
+===== FTS =====
+1. /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md (chunk 0)
+2. /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md (chunk 1)
+3. /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md (chunk 0)
+4. /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md (chunk 1)
+5. /home/rafayahmadraza/Logseq/pages/AMI.md (chunk 0)
+
+===== VECTOR =====
+
+--- RESULT 1 ---
+Score: 0.6100814938545227
+Source: /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md:0
+- To Create a backup(snapshot) of an EBS volume at any point in time.
+- Not necessary to detach the volume but recommended to do so.
+- the snapshot can be copied across AZ or Region
+- ![image.png](../assets/image_1785091910185_0.png)
+- Features
+	- EBS Snapshot Archive
+		- Move a Snapshot to an 'archive tier' that is 75% cheaper.
+		- ![image.png](../assets/image_1785092044276_0.png)
+		- It takes 24 to 72 hours to restoring the archive
+		- it is best used in cases for snapshots that do not need to
+
+--- RESULT 2 ---
+Score: 0.8427360653877258
+Source: /home/rafayahmadraza/Logseq/pages/AMI.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/AMI.md:0
+- AMI = Amazon Machine Image
+- Customization of an EC2 Instance
+	- You add your own software, configuration, os, monitoring etc.
+	- Faster boot/ configuration time because all software is prepackaged.
+- AMI are built for specific region but can be copied across regions.
+- You can launch EC2 Instances from:
+	- A Public AMI: Aws providd
+	- Your own AMI: you make and maintain them yourself.
+	- An Aws Marketplace AMI: an AMI someone else made (and potentially sells)
+- Process
+	- Start an EC2 instanc
+
+--- RESULT 3 ---
+Score: 0.8736662864685059
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md:0
+- EBS Volume
+	- Elastic Block Store Volume
+	- Network drive attached to an instance
+	- Allows data to persist even after termination of an instance
+	- Mounted to one instance at a time. At ccp level
+	- Bound to specific availability zones.
+	- Like network usb sticks.
+	- Network Drive (not a physical drive)
+		- it uses the network to communicate to instance. so might have a delay
+		- it can be detached from one instance and attached to another one relatively quickly.
+		- Its locked to AZ
+			- it 
+
+--- RESULT 4 ---
+Score: 1.0138235092163086
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Store.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/EC2 Instance Store.md:0
+- EBS are network drives but they have limited performance to fix this we can attach a high-performance hardware disk which uses EC2 instance store
+- Connected to the server through physical connection.
+-
+- Used for
+	- Better I/O performance
+	- EC2 instance Store loses their storage if they're stopped (ephemeral)
+	- Good for buffer/cache/scratch data/ temporary content.
+	- Risk of data loss if hardware fails
+	- Backups and Replication are our responsiblity.
+- [[EFS]]
+-
+
+--- RESULT 5 ---
+Score: 1.057561993598938
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md
+Chunk: 1
+ID: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md:1
+- By default any other attached EBS is not deleted(attribute  disabled)
+				- This can be control via Aws console or CLI
+				- It is used to preserve root volume when an instance is terminated.
+		- Exception
+			- IO1 and IO2 Volumes can be attached to multiple instances this feature is called EBS- Multi-Attach
+			- For Exam out of scope.
+		- Diagram
+			- ![image.png](../assets/image_1785091302629_0.png)
+		- Steps
+			- Open Instance
+			- Go To Storage Tab
+			- There is root device
+			- we have an
+
+===== RAG =====
+
+===== CONTEXT =====
+[Source 1]
+Source: /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md
+- To Create a backup(snapshot) of an EBS volume at any point in time.
+- Not necessary to detach the volume but recommended to do so.
+- the snapshot can be copied across AZ or Region
+- ![image.png](../assets/image_1785091910185_0.png)
+- Features
+	- EBS Snapshot Archive
+		- Move a Snapshot to an 'archive tier' that is 75% cheaper.
+		- ![image.png](../assets/image_1785092044276_0.png)
+		- It takes 24 to 72 hours to restoring the archive
+		- it is best used in cases for snapshots that do not need to be restored in a rush
+	- Recycle Bin For EBS Snapshots
+		- by default snapshots are deleted fully but rules can be setup to retain deleted snapshots which allows for easier recovery in case of accidental removal.
+		- Specify retention time (from 1 day to 1 year)
+		- ![image.png](../assets/image_1785092165366_0.png)
+- Hands On Steps
+	- Actions
+	- Create a Snapshot
+	- Description whatever
+	- Side Bar has Snapshots
+	- Right Click to copy snapshot
+	- Select AZ where you want to send snapshot
+
+[Source 2]
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md
+- EBS Volume
+	- Elastic Block Store Volume
+	- Network drive attached to an instance
+	- Allows data to persist even after termination of an instance
+	- Mounted to one instance at a time. At ccp level
+	- Bound to specific availability zones.
+	- Like network usb sticks.
+	- Network Drive (not a physical drive)
+		- it uses the network to communicate to instance. so might have a delay
+		- it can be detached from one instance and attached to another one relatively quickly.
+		- Its locked to AZ
+			- it means an EBS volume in us-east-1a can not be used int us-east-1b
+			- you need to snapshot a volume to move it.
+		- It needs provisioned capacity that is size in GBs, and IOPS(Operations per seconds)
+			- billed for this
+			- can be increased
+		- Can be left unattached.
+		- Delete on Termination attribute
+			- Allows for deletion of volume when instance is terminated.
+				- By default root EBS is deleted when root is deleted
+
+[Source 3]
+Source: /home/rafayahmadraza/Logseq/pages/AMI.md
+- AMI = Amazon Machine Image
+- Customization of an EC2 Instance
+	- You add your own software, configuration, os, monitoring etc.
+	- Faster boot/ configuration time because all software is prepackaged.
+- AMI are built for specific region but can be copied across regions.
+- You can launch EC2 Instances from:
+	- A Public AMI: Aws providd
+	- Your own AMI: you make and maintain them yourself.
+	- An Aws Marketplace AMI: an AMI someone else made (and potentially sells)
+- Process
+	- Start an EC2 instance and customize it
+	- Stop the instance for data integrity
+	- Build an AMI this will create EBS snapshots
+	- Launch instances from other AMIs.
+- Diagram
+- ![image.png](../assets/image_1785092543139_0.png)
+- Steps
+	- First Launch an instance ie create an instance etc
+	- wait for it to initialize
+	- Right click
+		- Image and Template
+			- Create image
+				- Set Image Name
+				- Keep everything else default unless something required to be changed
+
+[Source 4]
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md
+- By default any other attached EBS is not deleted(attribute  disabled)
+				- This can be control via Aws console or CLI
+				- It is used to preserve root volume when an instance is terminated.
+		- Exception
+			- IO1 and IO2 Volumes can be attached to multiple instances this feature is called EBS- Multi-Attach
+			- For Exam out of scope.
+		- Diagram
+			- ![image.png](../assets/image_1785091302629_0.png)
+		- Steps
+			- Open Instance
+			- Go To Storage Tab
+			- There is root device
+			- we have an 8 gbs volume attched
+			- click on it
+			- we can see type, size, IOPS etc.
+			- To Create Volume
+				- Click Create Volume
+			- we can select any type but for the course select gp2
+			- select size as 2gbs
+			- then check availity zone on the 8gb volume
+			- select that az on the newly created volume.
+			- To attach the volume to any instance.
+				- Click Action
+				- Click On Attach Volume
+				- Select Instance
+				- Boom Connected
+			- [[EBS Snapshots]]
+			-
+			-
+
+[Source 5]
+Source: /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md
+- Action create volume from snapshot allows you to recreate any snaphot.
+	- Snapshot has recycle bin which can be clicked to create a retention rule.
+	- you can set retention rule as well as set up rule lock which allows for deletion of the retention rule.
+	- From action you can do the archive snapshot as well
+	- Recycle Bin -> Resources has deleted snapshots you can right click and click restore it.
+	- [[AMI]]
+	-
+-
+===================
+
+
+===== ANSWER =====
+An EBS snapshot is used to create a backup of an EBS volume at any point in time.
+
+Key features and functions of EBS snapshots include:
+
+*   **Copying:** Snapshots can be copied across Availability Zones (AZ) or Regions.
+*   **Restoration:** An action to create a volume from a snapshot allows you to recreate any snapshot.
+*   **Archiving:** Snapshots can be moved to an 'archive tier' to be 75% cheaper, though restoring an archive snapshot takes 24 to 72 hours.
+*   **Recovery:** There is a Recycle Bin for EBS Snapshots, which allows rules to be set to retain deleted snapshots for easier recovery.
+
+===== SOURCES =====
+- /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/AMI.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md (chunk 1)
+- /home/rafayahmadraza/Logseq/pages/EBS Snapshots.md (chunk 1)
+
+================================================================================
+QUERY: How does EC2 storage work?
+================================================================================
+
+===== FTS =====
+1. /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md (chunk 0)
+2. /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md (chunk 1)
+3. /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md (chunk 4)
+4. /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md (chunk 5)
+5. /home/rafayahmadraza/Logseq/pages/AMI.md (chunk 0)
+
+===== VECTOR =====
+
+--- RESULT 1 ---
+Score: 0.8085976243019104
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md:0
+- EBS Volume
+	- Elastic Block Store Volume
+	- Network drive attached to an instance
+	- Allows data to persist even after termination of an instance
+	- Mounted to one instance at a time. At ccp level
+	- Bound to specific availability zones.
+	- Like network usb sticks.
+	- Network Drive (not a physical drive)
+		- it uses the network to communicate to instance. so might have a delay
+		- it can be detached from one instance and attached to another one relatively quickly.
+		- Its locked to AZ
+			- it 
+
+--- RESULT 2 ---
+Score: 0.9111971259117126
+Source: /home/rafayahmadraza/Logseq/pages/Aws.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/Aws.md:0
+- [[EC2 Instance Storage]]
+	- [[EBS Snapshots]]
+	- [[EC2 Instance Store]]
+	- [[AMI]]
+	- [[EC2 Image Builder]]
+	- [[EFS]]
+	- [[EC2 Shared Responsibility]]
+	- [[Amazon FSx]]
+- [[ELB & ASG]]
+	- [[load balancing]]
+	- [[Auto Scaling Group]]
+
+--- RESULT 3 ---
+Score: 0.9464883804321289
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md
+Chunk: 1
+ID: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md:1
+- By default any other attached EBS is not deleted(attribute  disabled)
+				- This can be control via Aws console or CLI
+				- It is used to preserve root volume when an instance is terminated.
+		- Exception
+			- IO1 and IO2 Volumes can be attached to multiple instances this feature is called EBS- Multi-Attach
+			- For Exam out of scope.
+		- Diagram
+			- ![image.png](../assets/image_1785091302629_0.png)
+		- Steps
+			- Open Instance
+			- Go To Storage Tab
+			- There is root device
+			- we have an
+
+--- RESULT 4 ---
+Score: 0.9497894048690796
+Source: /home/rafayahmadraza/Logseq/pages/EFS.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/EFS.md:0
+- Managed NFS (Network File System) that can be mounted on 100s of EC2
+- EFS works only with Linux EC2 instances in multi-AZ
+- Highly Available
+- Scalable
+- Expensive(3xgp2)
+- pay per use
+- no capacity planning
+- ![image.png](../assets/image_1785093219236_0.png)
+- EBS vs EFS
+	- ![image.png](../assets/image_1785093263164_0.png)
+	-
+- EFS Infrequent Access (EFS-IA)
+	- Cost-optimized for files not accessed every day
+	- Up to 92% lower cost compared to EFS Standard.
+	- EFS moves files to EFS-IA autom
+
+--- RESULT 5 ---
+Score: 1.0002981424331665
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Shared Responsibility.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/EC2 Shared Responsibility.md:0
+- Aws is responsible for
+	- Infrastructure
+	- Replication for data for EBS volumes and EFS Drives
+	- Replacing faulty hardware
+	- Ensuing their employees can not access your data
+- Our Responsibility
+	- Setting up backup/ snapshot procedures
+	- Setting up data encryption
+	- Responsibility of any data on the drives
+	- Understanding the risk of using an EC2 Instace
+- [[Amazon FSx]]
+-
+
+===== RAG =====
+
+===== CONTEXT =====
+[Source 1]
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md
+- EBS Volume
+	- Elastic Block Store Volume
+	- Network drive attached to an instance
+	- Allows data to persist even after termination of an instance
+	- Mounted to one instance at a time. At ccp level
+	- Bound to specific availability zones.
+	- Like network usb sticks.
+	- Network Drive (not a physical drive)
+		- it uses the network to communicate to instance. so might have a delay
+		- it can be detached from one instance and attached to another one relatively quickly.
+		- Its locked to AZ
+			- it means an EBS volume in us-east-1a can not be used int us-east-1b
+			- you need to snapshot a volume to move it.
+		- It needs provisioned capacity that is size in GBs, and IOPS(Operations per seconds)
+			- billed for this
+			- can be increased
+		- Can be left unattached.
+		- Delete on Termination attribute
+			- Allows for deletion of volume when instance is terminated.
+				- By default root EBS is deleted when root is deleted
+
+[Source 2]
+Source: /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md
+- By default any other attached EBS is not deleted(attribute  disabled)
+				- This can be control via Aws console or CLI
+				- It is used to preserve root volume when an instance is terminated.
+		- Exception
+			- IO1 and IO2 Volumes can be attached to multiple instances this feature is called EBS- Multi-Attach
+			- For Exam out of scope.
+		- Diagram
+			- ![image.png](../assets/image_1785091302629_0.png)
+		- Steps
+			- Open Instance
+			- Go To Storage Tab
+			- There is root device
+			- we have an 8 gbs volume attched
+			- click on it
+			- we can see type, size, IOPS etc.
+			- To Create Volume
+				- Click Create Volume
+			- we can select any type but for the course select gp2
+			- select size as 2gbs
+			- then check availity zone on the 8gb volume
+			- select that az on the newly created volume.
+			- To attach the volume to any instance.
+				- Click Action
+				- Click On Attach Volume
+				- Select Instance
+				- Boom Connected
+			- [[EBS Snapshots]]
+			-
+			-
+
+[Source 3]
+Source: /home/rafayahmadraza/Logseq/pages/Aws.md
+- [[EC2 Instance Storage]]
+	- [[EBS Snapshots]]
+	- [[EC2 Instance Store]]
+	- [[AMI]]
+	- [[EC2 Image Builder]]
+	- [[EFS]]
+	- [[EC2 Shared Responsibility]]
+	- [[Amazon FSx]]
+- [[ELB & ASG]]
+	- [[load balancing]]
+	- [[Auto Scaling Group]]
+
+[Source 4]
+Source: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md
+- MINIX
+				- Andrew Tanenbaum heard AT&T Unix Version 7 would no longer be available for educational institutions, he began to work on MINIX, a microkernel-based, UNIX V7-compatible os.
+				- Initially it kept Crashing and he was about to terminate the project until one of his students informed him that the crash was due to the intel chip overheating and generating a thermal interrupt.
+				- Tanenbaum fixed the problem and MINIX was freely relared to universities in 1987 but it was copyrighted and no one was allowed to modify its source code.
+				- In 2000s its name and licensing was changed to a permissive license called the Berkely Software Distrbution (BSD). This license allows the user to modify the source code but does not require the user to make the modified source code to be made available.
+				- Current Version is MINIX 3 used for mostly in embedded systems.
+			- GNU
+				- On Sep 27, 1973, Richard Stallman announced the GNU project(GNU stands for GNU is Not Unix)
+
+[Source 5]
+Source: /home/rafayahmadraza/Logseq/pages/EFS.md
+- Managed NFS (Network File System) that can be mounted on 100s of EC2
+- EFS works only with Linux EC2 instances in multi-AZ
+- Highly Available
+- Scalable
+- Expensive(3xgp2)
+- pay per use
+- no capacity planning
+- ![image.png](../assets/image_1785093219236_0.png)
+- EBS vs EFS
+	- ![image.png](../assets/image_1785093263164_0.png)
+	-
+- EFS Infrequent Access (EFS-IA)
+	- Cost-optimized for files not accessed every day
+	- Up to 92% lower cost compared to EFS Standard.
+	- EFS moves files to EFS-IA automatically based on last time accessed
+	- Enable EFS-IA with lifecycle policy.
+	- Example: move files that are not accessed in 60 days to EFS-IA
+	- almost no drawback helps in dropping cost.
+	- ![image.png](../assets/image_1785093383777_0.png)
+	- [[EC2 Shared Responsibility]]
+	-
+===================
+
+
+===== ANSWER =====
+EC2 storage utilizes several types of services, including Elastic Block Store (EBS), Elastic File System (EFS), and EC2 Instance Store.
+
+### Elastic Block Store (EBS)
+EBS volumes are network drives that attach to an instance and allow data to persist even after the instance is terminated.
+
+**Key characteristics of EBS:**
+*   **Function:** It is a network drive (not a physical drive) that communicates with the instance over the network, which may introduce a delay.
+*   **Attachment:** It is typically mounted to one instance at a time (at the CCP level).
+*   **Persistence:** You can configure a "Delete on Termination" attribute to allow the volume to be deleted when the instance is terminated. By default, any attached EBS volume is *not* deleted.
+*   **Availability Zone (AZ) Binding:** EBS volumes are bound to specific availability zones; for example, an EBS volume in `us-east-1a` cannot be used in `us-east-1b`. To move it, you must snapshot the volume.
+*   **Capacity:** It requires provisioned capacity, measured in GBs (size) and IOPS (Operations per second), which is billed.
+*   **Features:** EBS volumes can be detached from one instance and attached to another relatively quickly. IO1 and IO2 Volumes support EBS-Multi-Attach, allowing them to be attached to multiple instances.
+
+### Elastic File System (EFS)
+EFS is a managed Network File System (NFS) that offers a different type of storage.
+
+**Key characteristics of EFS:**
+*   **Function:** It can be mounted on hundreds of EC2 instances.
+*   **Compatibility:** It works only with Linux EC2 instances in multi-AZ.
+*   **Scalability:** It is highly available, scalable, and operates on a pay-per-use model with no capacity planning required.
+*   **Tiers:** EFS offers an Infrequent Access (EFS-IA) tier, which is cost-optimized for files not accessed every day, and EFS automatically moves files to this tier based on the last time they were accessed.
+
+### Other Storage Types
+The notes also reference:
+*   **EC2 Instance Store:** (Mentioned in the context of EC2 Instance Storage)
+*   **Amazon FSx:** (Mentioned in the context of EC2 Instance Storage)
+
+===== SOURCES =====
+- /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/EC2 Instance Storage.md (chunk 1)
+- /home/rafayahmadraza/Logseq/pages/Aws.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md (chunk 4)
+- /home/rafayahmadraza/Logseq/pages/EFS.md (chunk 0)
+
+================================================================================
+QUERY: How do I use Linux?
+================================================================================
+
+===== FTS =====
+1. /home/rafayahmadraza/Logseq/pages/Bash Notes.md (chunk 0)
+2. /home/rafayahmadraza/Logseq/pages/Episode 2 wrap.md (chunk 2)
+3. /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md (chunk 0)
+4. /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md (chunk 1)
+5. /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md (chunk 2)
+
+===== VECTOR =====
+
+--- RESULT 1 ---
+Score: 0.9704253673553467
+Source: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md
+Chunk: 9
+ID: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md:9
+- Most OS Software start as part of the boot process and terminates when the system is shut down, ie systemd, the package managers(apt,zypper,pacman,rpm)
+			- Administrator Rights
+				- SU -> allows the CLI to be Super User, It means switch user. it changes the user to root.
+				- sudo -> allows the currently loged in user to perform super user operations it literally means Super User Do.
+			- Troubleshooting User Login and Password
+				- verify you have an account
+				- after that make sure you
+
+--- RESULT 2 ---
+Score: 1.1077535152435303
+Source: /home/rafayahmadraza/Logseq/pages/linux+.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/linux+.md:0
+- [[Chapter 1 An Introduction to Linux and a Pre-Assesment Exam]]
+-
+- whoami
+	- currently logined in session
+- who
+	- shows who is currently logged in to the system and which terminal they are using
+- uname -a
+	- info about system i think?
+- pwd
+	- prints working directory
+- ls
+	- ls /
+		- lists directorys in /
+	- ls -l
+		- displays something total i think total file sizes? not sure
+		- it shows File type+permissions
+		- number of links, owner, group, file size, data modified, name
+	- ls -F
+		- 
+
+--- RESULT 3 ---
+Score: 1.1114814281463623
+Source: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md
+Chunk: 6
+ID: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md:6
+- most unis used MINIX to teach UNIX to their students, Torvalds did not like the MINIX terminal emulator and decided to write a better one. As he added functionality to his emulator, he concluded it would be better to create an os from scratch(the mad lad)
+			- Sep 17, 1991 Torvalds released a development environment called Freax (Free UNIX) under GPL License.  Richard Stallman's GNU project to create multiple toolds and utilities for Freax
+			- He also used monolithic kernel rather than a micr
+
+--- RESULT 4 ---
+Score: 1.2076152563095093
+Source: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md
+Chunk: 5
+ID: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md:5
+:LOGBOOK:
+				  CLOCK: [2026-02-14 Sat 14:49:28]
+				  :END:
+				- It was supposed to be a free UNIX-like OS that could be shared, studied and modified by anyone.
+				- It was created at the time due to the fact a free (as a cost) and open source versions of UNIX didnt not exist and AT&T didnt give  UNIX to learning institutions anymore and Andrew Tanenbaum's MINIX was copyrighted.
+				- In 1985 Stallman founded the Free Software Foundation and with attorney David wheeler create the General Publ
+
+--- RESULT 5 ---
+Score: 1.2701187133789062
+Source: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md
+Chunk: 7
+ID: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md:7
+- **Kernel** The kernel layer is the core of the OS, it provides the system with process, memory and task management.
+			- **Shell** Application and user environments and interface
+			- **Operating System Software** Used to manage the OS
+			- **Application Software** Editors and other user applications.
+		- ### Kernel
+			- Kernel layer is the core of any os.
+			- Most Linux distributions use a monolithic kernel.
+			- Some (GNU) use a microkernel.
+			- The Kernel is divided into the following com
+
+===== RAG =====
+
+===== CONTEXT =====
+[Source 1]
+Source: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md
+- Most OS Software start as part of the boot process and terminates when the system is shut down, ie systemd, the package managers(apt,zypper,pacman,rpm)
+			- Administrator Rights
+				- SU -> allows the CLI to be Super User, It means switch user. it changes the user to root.
+				- sudo -> allows the currently loged in user to perform super user operations it literally means Super User Do.
+			- Troubleshooting User Login and Password
+				- verify you have an account
+				- after that make sure your settings in /etc/passwd are defined correctly.
+		- ### Application Software
+			- user-space software like editors(vi, nvim, zed, spreadsheets, music players)
+		- Linux Derivatives
+			- Red Hat Derivatives
+				- SUSE and Oracle Unbreakable Linux are example of Red Hat derivatives.
+		- Desktop Less Then Servers since it can be used on servers as
+			- File and Print Server using NFS and CUPS or Samba services
+
+[Source 2]
+Source: /home/rafayahmadraza/Logseq/pages/Bash Notes.md
+- Terminal is REPL
+	- Read Eval Print Loop
+- Shell waits for the Command
+- alias
+	- used to define alias
+- history
+	- used to show all command ran
+- hidden files
+	- in unix you have to do filename. it makes it hidden
+- if [[ ]]; then
+	- statements
+- else
+	- statements
+- fi -> to finish conditionals
+- $AtSymbol
+	- Loops through all given arguments
+- Functions are mini programs in bash
+- [[linux+]]
+- varialbes are global from default remember to use local
+
+[Source 3]
+Source: /home/rafayahmadraza/Logseq/pages/linux+.md
+- [[Chapter 1 An Introduction to Linux and a Pre-Assesment Exam]]
+-
+- whoami
+	- currently logined in session
+- who
+	- shows who is currently logged in to the system and which terminal they are using
+- uname -a
+	- info about system i think?
+- pwd
+	- prints working directory
+- ls
+	- ls /
+		- lists directorys in /
+	- ls -l
+		- displays something total i think total file sizes? not sure
+		- it shows File type+permissions
+		- number of links, owner, group, file size, data modified, name
+	- ls -F
+		- what type a file is
+- if no sudo dont panic
+	- apt install sudo
+	- adduser yourname
+	- usermod -aG sudo yourname
+- mkdir
+	- make directory
+- cd
+	- change directory
+- touch
+	- create file
+- cp
+	- copy file
+- mv
+	- move file can also be used to rename
+	- is dangerous as can overwrite file without warning if a file already exists
+- rm
+	- remove file
+	- is dangerous permanently deletes files.
+	- -i interactive asks before removing a file. y/n
+- cat
+	- shows file content
+- gerp
+
+[Source 4]
+Source: /home/rafayahmadraza/Logseq/pages/Episode 2 wrap.md
+- My Thoughts: The Theme I saw in this episode were very unique. Asa finds her aunt and her friend talking in  a strange way. Mostly cause she never saw her mother being like that. They also subtulty hint that her friends dog might be died when makio comments that the cabbage chopping sounds like her friend's dog eating the cabbage cores. It also shows Asa spacing out multiple times during the conversation where she imagines herself in a foreign land where she does not understand the language, the animators use the sounds of the middle east, india, while the architecture from what i can tell seems Thai. we are also reveled to the fact that Asa does not remember the home made meals of her mother she used to eat, she remember them being delicious but he does not remember what she used to eat. They also discuss the wording of the words of Asa's classmate, they discuss that she is being kind to Asa that by asking how's things going? she is not being too casual or too worried rather she is
+
+[Source 5]
+Source: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md
+- most unis used MINIX to teach UNIX to their students, Torvalds did not like the MINIX terminal emulator and decided to write a better one. As he added functionality to his emulator, he concluded it would be better to create an os from scratch(the mad lad)
+			- Sep 17, 1991 Torvalds released a development environment called Freax (Free UNIX) under GPL License.  Richard Stallman's GNU project to create multiple toolds and utilities for Freax
+			- He also used monolithic kernel rather than a microkernel
+			- Later the name was changed to Linux, Linux then posted the source code and invited other programmers to review, modify and contribute enhancments to this system, this was the original linux os
+	- ## Linux Operating System Structure
+		- An operating system provides a means for the user to execute programs on a computer.
+		- The Linux OS consists of multiple functional layers (layered architecture)
+			- **Hardware Layer** Responsible for interacting with system hardware
+===================
+
+
+===== ANSWER =====
+Based on your notes, using Linux involves interacting with the operating system through various layers, including the terminal, and utilizing specific commands for file management and system administration.
+
+Here is a summary of how you can use Linux, categorized by function:
+
+### 🖥️ Basic Interaction and System Information
+
+*   **Terminal:** The terminal acts as a REPL (Read Eval Print Loop), waiting for commands.
+*   **Checking Identity:**
+    *   `whoami`: Shows the currently logged-in session.
+    *   `who`: Shows who is currently logged in to the system and which terminal they are using.
+*   **Navigation and Location:**
+    *   `pwd`: Prints the working directory.
+    *   `cd`: Changes directory.
+*   **System Details:**
+    *   `uname -a`: Provides information about the system.
+
+### 📂 File and Directory Management
+
+*   **Creating/Modifying:**
+    *   `mkdir`: Makes a directory.
+    *   `touch`: Creates a file.
+*   **Viewing Files:**
+    *   `cat`: Shows file content.
+    *   `ls`: Lists directories (e.g., `ls /` lists directories in the root `/`).
+    *   `ls -l`: Displays detailed information, including file type, permissions, number of links, owner, group, file size, data modified, and name.
+    *   `ls -F`: Shows what type of a file is.
+*   **Manipulating Files:**
+    *   `cp`: Copies a file.
+    *   `mv`: Moves a file; it can also be used to rename a file. (Note: This command is dangerous as it can overwrite a file without warning if one already exists.)
+    *   `rm`: Removes a file. (Note: This is dangerous as it permanently deletes files. You can use `-i` to ask before removing a file.)
+
+### 🛡️ Permissions and Administration
+
+*   **Super User Access:**
+    *   `SU`: Allows the CLI to be a Super User, meaning it switches the user to root.
+    *   `sudo`: Allows the currently logged-in user to perform super user operations (Super User Do).
+*   **Gaining Sudo Access:** If you do not have `sudo`, you can install it using:
+    1.  `apt install sudo`
+    2.  `adduser yourname`
+    3.  `usermod -aG sudo yourname`
+
+### ⚙️ Shell Features
+
+*   **Aliases:** You can define aliases using the `alias` command.
+*   **History:** The `history` command shows all commands that have been run.
+*   **Conditionals:** You can use `if [[ ]]; then` statements, followed by `else` statements, and finish the conditional block with `fi`.
+*   **Variables:** Variables are global by default, but you should remember to use `local` for them.
+
+### 🌐 What Linux Can Be Used For
+
+*   **Servers:** Linux can be used as a File and Print Server using services like NFS and CUPS or Samba.
+*   **Application Software:** It supports user-space software such as editors (vi, nvim, zed), spreadsheets, and music players.
+*   **Derivatives:** Linux has derivatives, such as SUSE and Oracle Unbreakable Linux (which are Red Hat Derivatives).
+
+===== SOURCES =====
+- /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md (chunk 9)
+- /home/rafayahmadraza/Logseq/pages/Bash Notes.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/linux+.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/Episode 2 wrap.md (chunk 2)
+- /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md (chunk 6)
+
+================================================================================
+QUERY: What Linux distribution am I using?
+================================================================================
+
+===== FTS =====
+1. /home/rafayahmadraza/Logseq/pages/Bash Notes.md (chunk 0)
+2. /home/rafayahmadraza/Logseq/pages/Episode 2 wrap.md (chunk 3)
+3. /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md (chunk 0)
+4. /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md (chunk 1)
+5. /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md (chunk 2)
+
+===== VECTOR =====
+
+--- RESULT 1 ---
+Score: 1.2127774953842163
+Source: /home/rafayahmadraza/Logseq/pages/linux+.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/linux+.md:0
+- [[Chapter 1 An Introduction to Linux and a Pre-Assesment Exam]]
+-
+- whoami
+	- currently logined in session
+- who
+	- shows who is currently logged in to the system and which terminal they are using
+- uname -a
+	- info about system i think?
+- pwd
+	- prints working directory
+- ls
+	- ls /
+		- lists directorys in /
+	- ls -l
+		- displays something total i think total file sizes? not sure
+		- it shows File type+permissions
+		- number of links, owner, group, file size, data modified, name
+	- ls -F
+		- 
+
+--- RESULT 2 ---
+Score: 1.2850546836853027
+Source: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md
+Chunk: 9
+ID: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md:9
+- Most OS Software start as part of the boot process and terminates when the system is shut down, ie systemd, the package managers(apt,zypper,pacman,rpm)
+			- Administrator Rights
+				- SU -> allows the CLI to be Super User, It means switch user. it changes the user to root.
+				- sudo -> allows the currently loged in user to perform super user operations it literally means Super User Do.
+			- Troubleshooting User Login and Password
+				- verify you have an account
+				- after that make sure you
+
+--- RESULT 3 ---
+Score: 1.2962170839309692
+Source: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md
+Chunk: 6
+ID: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md:6
+- most unis used MINIX to teach UNIX to their students, Torvalds did not like the MINIX terminal emulator and decided to write a better one. As he added functionality to his emulator, he concluded it would be better to create an os from scratch(the mad lad)
+			- Sep 17, 1991 Torvalds released a development environment called Freax (Free UNIX) under GPL License.  Richard Stallman's GNU project to create multiple toolds and utilities for Freax
+			- He also used monolithic kernel rather than a micr
+
+--- RESULT 4 ---
+Score: 1.37842857837677
+Source: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md
+Chunk: 5
+ID: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md:5
+:LOGBOOK:
+				  CLOCK: [2026-02-14 Sat 14:49:28]
+				  :END:
+				- It was supposed to be a free UNIX-like OS that could be shared, studied and modified by anyone.
+				- It was created at the time due to the fact a free (as a cost) and open source versions of UNIX didnt not exist and AT&T didnt give  UNIX to learning institutions anymore and Andrew Tanenbaum's MINIX was copyrighted.
+				- In 1985 Stallman founded the Free Software Foundation and with attorney David wheeler create the General Publ
+
+--- RESULT 5 ---
+Score: 1.4245939254760742
+Source: /home/rafayahmadraza/Logseq/pages/linux+.md
+Chunk: 2
+ID: /home/rafayahmadraza/Logseq/pages/linux+.md:2
+- type
+	- tells type of the command, that is it bash bult in and if its external
+- which
+	- finds external commands
+- compgen
+	- shows all built in commands.
+- file
+	- tells what type of a file on the system is.
+- echo $PATH
+	- $PATH is a variable
+- tr -> translate
+	- converts stuff
+	- : '\n'c
+	  id:: 698b6029-9070-4c59-a810-c91edaba6dd4
+- create variable
+	- variable_name=whateveryouwanthere
+- unset
+	- unset value of the variable after you are done with it.
+- uname
+	- prints name of the system
+-
+
+===== RAG =====
+
+===== CONTEXT =====
+[Source 1]
+Source: /home/rafayahmadraza/Logseq/pages/linux+.md
+- [[Chapter 1 An Introduction to Linux and a Pre-Assesment Exam]]
+-
+- whoami
+	- currently logined in session
+- who
+	- shows who is currently logged in to the system and which terminal they are using
+- uname -a
+	- info about system i think?
+- pwd
+	- prints working directory
+- ls
+	- ls /
+		- lists directorys in /
+	- ls -l
+		- displays something total i think total file sizes? not sure
+		- it shows File type+permissions
+		- number of links, owner, group, file size, data modified, name
+	- ls -F
+		- what type a file is
+- if no sudo dont panic
+	- apt install sudo
+	- adduser yourname
+	- usermod -aG sudo yourname
+- mkdir
+	- make directory
+- cd
+	- change directory
+- touch
+	- create file
+- cp
+	- copy file
+- mv
+	- move file can also be used to rename
+	- is dangerous as can overwrite file without warning if a file already exists
+- rm
+	- remove file
+	- is dangerous permanently deletes files.
+	- -i interactive asks before removing a file. y/n
+- cat
+	- shows file content
+- gerp
+
+[Source 2]
+Source: /home/rafayahmadraza/Logseq/pages/Bash Notes.md
+- Terminal is REPL
+	- Read Eval Print Loop
+- Shell waits for the Command
+- alias
+	- used to define alias
+- history
+	- used to show all command ran
+- hidden files
+	- in unix you have to do filename. it makes it hidden
+- if [[ ]]; then
+	- statements
+- else
+	- statements
+- fi -> to finish conditionals
+- $AtSymbol
+	- Loops through all given arguments
+- Functions are mini programs in bash
+- [[linux+]]
+- varialbes are global from default remember to use local
+
+[Source 3]
+Source: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md
+- Most OS Software start as part of the boot process and terminates when the system is shut down, ie systemd, the package managers(apt,zypper,pacman,rpm)
+			- Administrator Rights
+				- SU -> allows the CLI to be Super User, It means switch user. it changes the user to root.
+				- sudo -> allows the currently loged in user to perform super user operations it literally means Super User Do.
+			- Troubleshooting User Login and Password
+				- verify you have an account
+				- after that make sure your settings in /etc/passwd are defined correctly.
+		- ### Application Software
+			- user-space software like editors(vi, nvim, zed, spreadsheets, music players)
+		- Linux Derivatives
+			- Red Hat Derivatives
+				- SUSE and Oracle Unbreakable Linux are example of Red Hat derivatives.
+		- Desktop Less Then Servers since it can be used on servers as
+			- File and Print Server using NFS and CUPS or Samba services
+
+[Source 4]
+Source: /home/rafayahmadraza/Logseq/pages/Episode 2 wrap.md
+worried rather she is conveying the message of how are you? how have you being holding up? etc etc in doing so Asa response with i am doing fine daijobou. which is enough. After the dinner, Makio tells her niece not to pressure her much about being well a caring guadrian, Asa is confused for a bit about this and then recognizes it saying you mean like you cant do simple stuff like this? which indicates that Asa might have being emtionally or verbally abused or brought down by her mother just as her aunt was brought down by her. This might also indicate the fact that Asa's Mother was in general not nice. Also various scenes point to the fact that Asa might again be ND. The Book Makio wrote was on characters where we know about one Ruby. someone who tries her best to get back to her home. over and over again yet the ending is shown by makio talking to asa and saying we are going to return to your home the book has the word home showing.
+
+[Source 5]
+Source: /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md
+- most unis used MINIX to teach UNIX to their students, Torvalds did not like the MINIX terminal emulator and decided to write a better one. As he added functionality to his emulator, he concluded it would be better to create an os from scratch(the mad lad)
+			- Sep 17, 1991 Torvalds released a development environment called Freax (Free UNIX) under GPL License.  Richard Stallman's GNU project to create multiple toolds and utilities for Freax
+			- He also used monolithic kernel rather than a microkernel
+			- Later the name was changed to Linux, Linux then posted the source code and invited other programmers to review, modify and contribute enhancments to this system, this was the original linux os
+	- ## Linux Operating System Structure
+		- An operating system provides a means for the user to execute programs on a computer.
+		- The Linux OS consists of multiple functional layers (layered architecture)
+			- **Hardware Layer** Responsible for interacting with system hardware
+===================
+
+
+===== ANSWER =====
+I do not have enough information.
+
+===== SOURCES =====
+- /home/rafayahmadraza/Logseq/pages/linux+.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/Bash Notes.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md (chunk 9)
+- /home/rafayahmadraza/Logseq/pages/Episode 2 wrap.md (chunk 3)
+- /home/rafayahmadraza/Logseq/pages/Chapter 1 An Introduction to Linux and a Pre-Assesment Exam.md (chunk 6)
+
+================================================================================
+QUERY: What is Chroma DB?
+================================================================================
+
+===== FTS =====
+1. /home/rafayahmadraza/Logseq/logseq/.recycle/pages_Chroma_DB Test.md (chunk 0)
+2. /home/rafayahmadraza/Logseq/pages/ELB & ASG.md (chunk 0)
+3. /home/rafayahmadraza/Logseq/journals/2026_10_04.md (chunk 0)
+
+===== VECTOR =====
+
+--- RESULT 1 ---
+Score: 0.2343396693468094
+Source: /home/rafayahmadraza/Logseq/logseq/.recycle/pages_Chroma_DB Test.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/logseq/.recycle/pages_Chroma_DB Test.md:0
+- What is chroma db
+	- it is a vector db
+
+--- RESULT 2 ---
+Score: 1.472902536392212
+Source: /home/rafayahmadraza/Logseq/journals/2026_10_04.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/journals/2026_10_04.md:0
+journal-created:: true
+	- ### Thoughts to write
+		- Testing If the Data is Being Updated Within the Chroma DB. Re Testing It
+	- ### what creative thing did you do today?
+	- ### Mood Tracking:
+		- Morning:
+		- Afternoon:
+		- Evening:
+		- Night:
+	- ## Idea Dumps(Only if you have them dont stress)
+	- Hello World
+
+--- RESULT 3 ---
+Score: 1.5368326902389526
+Source: /home/rafayahmadraza/Logseq/pages/USB.md
+Chunk: 1
+ID: /home/rafayahmadraza/Logseq/pages/USB.md:1
+- After a while this was replaced by micro-b when mini-b was considered to big so it became widely used
+- USB OTG
+	- An OTG product is a mobile device with a single USB port that may operate as a host or peripheral.
+	- common example is well a camera which can appear as a storage device but also be used to control a printer.
+- ## USB 3
+	- November 2008
+	- Increased speed to 5Gbps
+	- New "SuperSpeed" Connectors include both the old USB 2.0 bus, and a set of new pins for the new USB 3.0 bus.
+	- No
+
+--- RESULT 4 ---
+Score: 1.5410361289978027
+Source: /home/rafayahmadraza/Logseq/pages/html+css notes.md
+Chunk: 1
+ID: /home/rafayahmadraza/Logseq/pages/html+css notes.md:1
+- audio
+		- controls autoplay muted loop
+			- source element type
+	- video
+		- formats are .mp4, .webm, .ogg
+		- src
+		- height
+		- width
+		- controls autoplay muted loop type
+	- favicons
+		- supported icons are .ico,.png,.gif,.jpg,.svg
+		- link
+			- rel type href
+	- Text formatting
+		- bold <b></b>
+		- italic <i>
+		- underline <u>
+		- deleted text <del>
+		- big text <big>
+		- small text <small>
+		- subscript <sub>
+		- superscript <sup>
+		- mono space <tt>
+		- mark(highlight effect> <mark>
+	- Gr
+
+--- RESULT 5 ---
+Score: 1.5738928318023682
+Source: /home/rafayahmadraza/Logseq/pages/Photography.md
+Chunk: 0
+ID: /home/rafayahmadraza/Logseq/pages/Photography.md:0
+- Composition
+	- Leading Lines
+	- Landscape or portrait
+	- Framing
+	- Foreground Interest
+	- Getting Close
+	- Symmetry
+	- The Rule of Thirds
+	- Working the frame
+	- Visual weight
+	- Breaking the rules
+- Exposure
+	- Shutter Speed
+	- Aperture
+	- ISO
+	- Modes
+	- 'Program' Mode
+	- Slow Shutter Speeds
+	  id:: 6a9ac2f2-7160-480c-b584-eca8ef777a52
+		- Blurs
+	- Slow Shutter Speeds At Night
+		- Light Trails
+	- Fast Shutter Speeds
+		- The Big Freeze
+	- Aperture Priority
+	- Shallow Depth of Field
+	- Compel
+
+===== RAG =====
+
+===== CONTEXT =====
+[Source 1]
+Source: /home/rafayahmadraza/Logseq/logseq/.recycle/pages_Chroma_DB Test.md
+- What is chroma db
+	- it is a vector db
+
+[Source 2]
+Source: /home/rafayahmadraza/Logseq/journals/2026_10_04.md
+journal-created:: true
+	- ### Thoughts to write
+		- Testing If the Data is Being Updated Within the Chroma DB. Re Testing It
+	- ### what creative thing did you do today?
+	- ### Mood Tracking:
+		- Morning:
+		- Afternoon:
+		- Evening:
+		- Night:
+	- ## Idea Dumps(Only if you have them dont stress)
+	- Hello World
+
+[Source 3]
+Source: /home/rafayahmadraza/Logseq/pages/ELB & ASG.md
+- Scalability means that an application / sytem can handle greater loads by adapting
+	- There are two kinds of scalability:
+		- Vertical
+		- Horizontal (= elasticity)
+	- Scalability is linked but different from High Availability.
+- ## Vertical Scalability
+	- Vertical means increasing the size of the instance
+	- For Example
+		- If application is running on t2.micro then scaling up will man running it on a t2.large
+	- Very common for non distributed systems such as DB
+	- Hardware limit
+- ## Horizontal Scalabiltiy
+	- It means increasing the number of instances/ systems for your application
+	- Horizontal implies distributed systems
+	- Common for web applications / modern applications
+	- It is easy to do thanks to the cloud
+- ## High Availability
+	- Usually goes hand in hand with horizontal scaling
+	- Means running your app / system in at least 2 AZs
+	- Goal is to survive a data center lose due to disaster
+- ![image.png](../assets/image_1785343704785_0.png)
+-
+
+[Source 4]
+Source: /home/rafayahmadraza/Logseq/pages/USB.md
+- After a while this was replaced by micro-b when mini-b was considered to big so it became widely used
+- USB OTG
+	- An OTG product is a mobile device with a single USB port that may operate as a host or peripheral.
+	- common example is well a camera which can appear as a storage device but also be used to control a printer.
+- ## USB 3
+	- November 2008
+	- Increased speed to 5Gbps
+	- New "SuperSpeed" Connectors include both the old USB 2.0 bus, and a set of new pins for the new USB 3.0 bus.
+	- Now the connectors are color coded blue with additional pins at the back of the  connector
+	  id:: 698b6a78-a94f-4a51-a2d5-84e01ceef1d0
+	- On a type-B superSpeed the pins are at the top
+	- Micro-B SuperSpeed its on the side
+- ## USB Confusion
+	- USB 3.1 Devices in 2013 and Type-C connector was introduced
+	- SuperSpeed bus to 10Gbps and labelled as "SuperSpeed+"
+	- This led to confusion that only Type-C could operate at USB 3.1 Speeds
+
+[Source 5]
+Source: /home/rafayahmadraza/Logseq/pages/html+css notes.md
+- audio
+		- controls autoplay muted loop
+			- source element type
+	- video
+		- formats are .mp4, .webm, .ogg
+		- src
+		- height
+		- width
+		- controls autoplay muted loop type
+	- favicons
+		- supported icons are .ico,.png,.gif,.jpg,.svg
+		- link
+			- rel type href
+	- Text formatting
+		- bold <b></b>
+		- italic <i>
+		- underline <u>
+		- deleted text <del>
+		- big text <big>
+		- small text <small>
+		- subscript <sub>
+		- superscript <sup>
+		- mono space <tt>
+		- mark(highlight effect> <mark>
+	- Group together html
+		- span inline container to group elements for styling purposes
+			- width is only as wide as its content.
+		- div block container to group elements for styling purposes
+			- takes 100% of the parents container's width.
+	- Unordered List
+		- ul
+			- li
+			- ul
+				- li
+	- Ordered List
+	- ol
+		- li
+	- Description List
+		- dl
+			- dt
+			- dd
+	- table
+		- tr
+			- th
+		- tr
+			- td
+		- rowspan
+		- colspan
+	- Buttons
+		- button
+	- Forms
+		- form action method
+			- label for
+===================
+
+
+===== ANSWER =====
+Chroma DB is a vector db.
+
+===== SOURCES =====
+- /home/rafayahmadraza/Logseq/logseq/.recycle/pages_Chroma_DB Test.md (chunk 0)
+- /home/rafayahmadraza/Logseq/journals/2026_10_04.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/ELB & ASG.md (chunk 0)
+- /home/rafayahmadraza/Logseq/pages/USB.md (chunk 1)
+- /home/rafayahmadraza/Logseq/pages/html+css notes.md (chunk 1)

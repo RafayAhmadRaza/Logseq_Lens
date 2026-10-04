@@ -14,7 +14,7 @@
 
 ~~8. LangChain Rag~~
 
-9. Prompts structured output
+~~9. Prompts structured output~~
 
 10. MCP tools/resource
 

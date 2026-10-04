@@ -18,11 +18,20 @@ from langchain_core.documents import Document
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_ollama import ChatOllama
-
+from pydantic import BaseModel, Field
 import hashlib
 import re
 
-
+class RAGResponse(BaseModel):
+    answer: str = Field(
+        description="Answer to the user's question using only the provided context."
+    )
+    sufficient_context: bool = Field(
+        description="Whether the provided context contains enough information to answer the question."
+    )
+    sources: list[str] = Field(
+        description="Sources used to answer the question."
+    )
 
 embeddings = HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-mpnet-base-v2"
@@ -38,13 +47,17 @@ prompt = ChatPromptTemplate.from_messages([
         "system",
         """You are an assistant that answers questions using the user's Logseq notes.
 
-Use only the provided context to answer the question.
+Use ONLY the provided context.
 
-If the context does not contain enough information to answer the question, say that you do not have enough information.
-
-Do not invent information.
+Rules:
+- Do not invent information.
+- If the context does not contain enough information, say so.
+- Set sufficient_context to true only when the context contains enough information to answer.
+- Include only sources that were actually used.
+- The answer should be concise and directly answer the question.
 
 Context:
+
 {context}
 """
     ),
@@ -54,7 +67,10 @@ Context:
     )
 ])
 
-rag_chain = prompt | llm | StrOutputParser()
+structured_llm = llm.with_structured_output(RAGResponse)
+rag_chain = prompt | structured_llm
+
+
 
 def build_context(docs):
     context = []
@@ -520,9 +536,6 @@ def rag(query, k=5):
     documents = search(query, k)
 
     context = build_context(documents)
-    print("\n===== CONTEXT =====")
-    print(context)
-    print("===================\n")
 
 
     answer = rag_chain.invoke({
@@ -543,56 +556,19 @@ if __name__ == "__main__":
     structured_docs = parse_documents(docs)
     sync(structured_docs)
 
-    queries = [
+    result = rag(
         "What materials do I need to level Yelan?",
-        "How much Mora does Yelan need?",
-        "What materials does Yelan need?",
-        "What is an EBS volume?",
-        "What is an EBS snapshot?",
-        "How does EC2 storage work?",
-        "How do I use Linux?",
-        "What Linux distribution am I using?",
-        "What is Chroma DB?",
-    ]
+        k=5
+    )
 
-    for query in queries:
+    print("\n===== STRUCTURED ANSWER =====")
 
-        print("\n" + "=" * 80)
-        print(f"QUERY: {query}")
-        print("=" * 80)
+    print("Answer:")
+    print(result["answer"].answer)
 
-        # ---------- FTS ----------
-        print("\n===== FTS =====")
+    print("\nEnough context:")
+    print(result["answer"].sufficient_context)
 
-        fts_results = keyword_search(query, k=5)
-
-        for i, doc in enumerate(fts_results, 1):
-            print(
-                f"{i}. "
-                f"{doc.metadata['source']} "
-                f"(chunk {doc.metadata['chunk_index']})"
-            )
-
-        # ---------- VECTOR ----------
-        print("\n===== VECTOR =====")
-
-        vector_results = semantic_search_debug(
-            query,
-            k=5
-        )
-
-        # ---------- HYBRID / RAG ----------
-        print("\n===== RAG =====")
-
-        result = rag(query, k=5)
-
-        print("\n===== ANSWER =====")
-        print(result["answer"])
-
-        print("\n===== SOURCES =====")
-
-        for doc in result["documents"]:
-            print(
-                f"- {doc.metadata['source']} "
-                f"(chunk {doc.metadata['chunk_index']})"
-            )
+    print("\nSources:")
+    for source in result["answer"].sources:
+        print("-", source)
