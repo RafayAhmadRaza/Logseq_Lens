@@ -12,13 +12,44 @@ import sqlite3
 
 from langchain_core.documents import Document
 
-
+from langchain_openrouter import ChatOpenRouter
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_ollama import ChatOllama
 from pydantic import BaseModel, Field
 import hashlib
 import re
+from langchain_ollama import ChatOllama
+from langchain_openrouter import ChatOpenRouter
+import os
+
+load_dotenv()
+
+
+
+def get_llm():
+    provider = os.getenv("LLM_PROVIDER", "ollama").lower()
+
+    if provider == "ollama":
+        return ChatOllama(
+            model=os.getenv("OLLAMA_MODEL", "gemma4:e4b"),
+            temperature=0
+        )
+
+    elif provider == "openrouter":
+        return ChatOpenRouter(
+            model=os.getenv("OPENROUTER_MODEL", "openrouter/free"),
+            temperature=0
+        )
+
+    else:
+        raise ValueError(
+            f"Unknown LLM provider: {provider}"
+        )
+
+
+llm = get_llm()
+
 
 class RAGResponse(BaseModel):
     answer: str = Field(
@@ -35,10 +66,7 @@ embeddings = HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-mpnet-base-v2"
     )
 
-llm = ChatOllama(
-    model="gemma4:e4b",
-    temperature=0
-)
+
 
 prompt = ChatPromptTemplate.from_messages([
     (

@@ -18,13 +18,13 @@
 
 10. MCP tools/resource
 
-11. LangGraph workflow
+~~11. LangGraph workflow~~
 
-12. Conversation persistence
+~~12. Conversation persistence~~
 
-13. LangSmith/Langfuse tracing
+~~13. LangSmith/Langfuse tracing~~
 
-14. Streamlit UI
+~~14. Streamlit UI~~
 
 15. Local/cloud provider switch
 
