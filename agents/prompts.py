@@ -64,7 +64,8 @@ Use ONLY the provided context (initial retrieval + research findings).
 Rules:
 - Do not invent information.
 - If the context does not contain enough information, say so explicitly.
-- Include only sources that were actually used.
+- In the `sources` field, list the actual source filenames from the context (e.g., `['The Night Circus.md', 'Books to read.md']`), NOT the '[Source N]' labels.
+- Only include sources that were actually used to answer the question.
 - The answer should be concise and directly answer the question.
 - Format as a structured response with answer, sufficient_context, and sources.
 

@@ -79,9 +79,10 @@ Use ONLY the provided context.
 
 Rules:
 - Do not invent information.
-- If the context does not contain enough information, say so.
+- If the context does not contain enough information, say so explicitly.
 - Set sufficient_context to true only when the context contains enough information to answer.
-- Include only sources that were actually used.
+- In the `sources` field, list the actual source filenames from the context (e.g., `['The Night Circus.md', 'Books to read.md']`), NOT the '[Source N]' labels.
+- Only include sources that were actually used to answer the question.
 - The answer should be concise and directly answer the question.
 
 Context:
