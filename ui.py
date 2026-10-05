@@ -15,6 +15,16 @@ st.set_page_config(
     layout="centered"
 )
 
+provider = st.sidebar.selectbox(
+    "LLM Provider",
+    ["Ollama", "OpenRouter"],
+    index=0
+)
+
+st.sidebar.caption(
+    "Ollama runs locally. OpenRouter uses a cloud model."
+)
+
 
 # --------------------------------------------------
 # Title
@@ -99,7 +109,8 @@ if prompt := st.chat_input("Ask your Logseq notes..."):
                 "search_query": "",
                 "documents": [],
                 "answer": None,
-                "messages": graph_messages
+                "messages": graph_messages,
+                "provider": provider
             })
 
 

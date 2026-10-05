@@ -1,9 +1,9 @@
 
-from rag import rag_chain, llm
+from rag import get_rag_chain
 from rag import build_context
 from rag import search
 from rag import RAGResponse
-
+from rag import get_llm
 from typing import TypedDict, Annotated
 
 from langgraph.graph import StateGraph, START, END
@@ -50,7 +50,7 @@ Latest question:
     )
 ])
 
-query_rewriter = query_rewrite_prompt | llm | StrOutputParser()
+
 
 
 class RAGState(TypedDict):
@@ -59,13 +59,17 @@ class RAGState(TypedDict):
     documents: list
     answer: RAGResponse
     messages: Annotated[list[BaseMessage], add_messages]
-
+    provider: str
 
 def rewrite_query_node(state: RAGState):
     history = "\n".join(
         f"{message.type}: {message.content}"
         for message in state["messages"]
     )
+
+    llm = get_llm(state["provider"])
+
+    query_rewriter = query_rewrite_prompt | llm | StrOutputParser()
 
     search_query = query_rewriter.invoke({
         "history": history,
@@ -75,8 +79,6 @@ def rewrite_query_node(state: RAGState):
     return {
         "search_query": search_query
     }
-
-
 def retrieved_node(state: RAGState):
     documents = search(
         state["search_query"],
@@ -91,6 +93,8 @@ def retrieved_node(state: RAGState):
 def generate_node(state: RAGState):
     context = build_context(state["documents"])
 
+    rag_chain = get_rag_chain(state["provider"])
+
     answer = rag_chain.invoke({
         "context": context,
         "question": state["question"]
@@ -103,7 +107,6 @@ def generate_node(state: RAGState):
             AIMessage(content=answer.answer)
         ]
     }
-
 graph = StateGraph(RAGState)
 
 graph.add_node("rewrite_query", rewrite_query_node)

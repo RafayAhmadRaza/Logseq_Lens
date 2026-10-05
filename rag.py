@@ -27,29 +27,28 @@ load_dotenv()
 
 
 
-def get_llm():
-    provider = os.getenv("LLM_PROVIDER", "ollama").lower()
-
-    if provider == "ollama":
+def get_llm(provider):
+    if provider == "Ollama":
         return ChatOllama(
             model=os.getenv("OLLAMA_MODEL", "gemma4:e4b"),
             temperature=0
         )
 
-    elif provider == "openrouter":
+    elif provider == "OpenRouter":
         return ChatOpenRouter(
             model=os.getenv("OPENROUTER_MODEL", "openrouter/free"),
             temperature=0
         )
 
     else:
-        raise ValueError(
-            f"Unknown LLM provider: {provider}"
-        )
+        raise ValueError(f"Unknown provider: {provider}")
 
+def get_rag_chain(provider):
+    llm = get_llm(provider)
 
-llm = get_llm()
+    structured_llm = llm.with_structured_output(RAGResponse)
 
+    return prompt | structured_llm
 
 class RAGResponse(BaseModel):
     answer: str = Field(
@@ -93,8 +92,6 @@ Context:
     )
 ])
 
-structured_llm = llm.with_structured_output(RAGResponse)
-rag_chain = prompt | structured_llm
 
 
 
