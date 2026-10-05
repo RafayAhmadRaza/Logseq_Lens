@@ -110,13 +110,15 @@ def format_sources(documents: List[Any]) -> List[Dict[str, Any]]:
     for i, doc in enumerate(documents, 1):
         source_path = doc.metadata.get("source", "Unknown")
         source_name = Path(source_path).name
+        # Handle both Document and SearchResult
+        content = getattr(doc, 'page_content', getattr(doc, 'content', ''))
         sources.append({
             "index": i,
             "stable_id": doc.metadata.get("stable_id", ""),
             "source": source_path,
             "source_name": source_name,
             "chunk_index": doc.metadata.get("chunk_index", 0),
-            "content": doc.page_content,
+            "content": content,
             "score": doc.metadata.get("search_score", doc.metadata.get("rrf_score")),
             "tags": doc.metadata.get("tags", ""),
             "page_links": doc.metadata.get("page_links", ""),

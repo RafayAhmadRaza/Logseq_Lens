@@ -105,14 +105,15 @@ def get_rag_chain(provider: str):
 
 # ---- Context Building ----
 
-def build_context(docs: List[Document]) -> str:
-    """Build context string from documents."""
+def build_context(docs) -> str:
+    """Build context string from documents (Document or SearchResult)."""
     context = []
     for i, doc in enumerate(docs, start=1):
+        content = getattr(doc, 'page_content', getattr(doc, 'content', ''))
         context.append(
             f"[Source {i}]\n"
             f"Source: {doc.metadata.get('source', 'Unknown')}\n"
-            f"{doc.page_content}"
+            f"{content}"
         )
     return "\n\n".join(context)
 
