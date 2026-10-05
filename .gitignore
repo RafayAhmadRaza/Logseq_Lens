@@ -1,3 +1,10 @@
 .env
 chroma_logseq_db
+indexes
 *.db
+__pycache__
+*.pyc
+.pytest_cache
+.DS_Store
+*.md
+!README.md

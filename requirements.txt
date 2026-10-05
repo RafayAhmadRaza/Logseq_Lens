@@ -2,16 +2,21 @@
 langchain
 langchain-community
 langchain-core
+langchain-huggingface
+langchain-ollama
+langchain-openrouter
+langchain-chroma
+langchain-text-splitters
 
 # LangGraph
 langgraph
 
 # MCP
-mcp
+mcp<2
 
 # Embeddings / vector search
 sentence-transformers
-faiss-cpu
+chromadb
 
 # Environment variables
 python-dotenv
@@ -23,4 +28,12 @@ streamlit
 pydantic
 
 # Observability
+langfuse
 langsmith
+
+# Logseq parsing
+LogseqMarkdownParser
+
+# Utilities
+uuid6
+rtoml
