@@ -172,7 +172,7 @@ def generate_final_answer_node(state: ResearchState) -> Dict[str, Any]:
     Generate the final answer using all gathered evidence.
     """
     from agents.prompts import FINAL_ANSWER_PROMPT
-    from services import RAGResponse
+    from rag import RAGResponse
     
     llm = get_llm(state["provider"])
     structured_llm = llm.with_structured_output(RAGResponse)
