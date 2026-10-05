@@ -53,14 +53,17 @@ def load_logseq_graph(graph_path: str) -> List[Dict]:
     if not graph.exists():
         return documents
     
-    # Search in pages/ and journals/ directories, plus root
+    # Search in pages/ and journals/ directories
     search_dirs = []
     if (graph / "pages").exists():
         search_dirs.append(graph / "pages")
     if (graph / "journals").exists():
         search_dirs.append(graph / "journals")
-    # Also check root for any .md files
-    search_dirs.append(graph)
+    
+    # Also check root for any .md files directly in root (non-recursive)
+    root_md_files = list(graph.glob("*.md"))
+    
+    seen_files = set()
     
     for search_dir in search_dirs:
         for file in search_dir.rglob("*.md"):
@@ -71,6 +74,12 @@ def load_logseq_graph(graph_path: str) -> List[Dict]:
             if any(part.startswith('.') for part in file.parts):
                 continue
             
+            # Use resolved path to avoid duplicates from symlinks
+            resolved = file.resolve()
+            if resolved in seen_files:
+                continue
+            seen_files.add(resolved)
+            
             try:
                 content = file.read_text(encoding="utf-8")
                 documents.append({
@@ -79,6 +88,26 @@ def load_logseq_graph(graph_path: str) -> List[Dict]:
                 })
             except Exception as e:
                 print(f"Error reading {file}: {e}")
+    
+    # Add root-level .md files (non-recursive)
+    for file in root_md_files:
+        if "bak" in file.parts:
+            continue
+        if any(part.startswith('.') for part in file.parts):
+            continue
+        resolved = file.resolve()
+        if resolved in seen_files:
+            continue
+        seen_files.add(resolved)
+        
+        try:
+            content = file.read_text(encoding="utf-8")
+            documents.append({
+                "content": content,
+                "source": str(file)
+            })
+        except Exception as e:
+            print(f"Error reading {file}: {e}")
     
     return documents
 
@@ -225,10 +254,19 @@ def sync_full(chunked_documents: List[Document]) -> SyncResult:
     result = SyncResult()
     
     try:
-        # Recreate vector store
+        # Recreate vector store - need to delete old collection first
         chroma_dir = get_graph_manager().get_chroma_dir()
         Path(chroma_dir).mkdir(parents=True, exist_ok=True)
         
+        # Delete existing collection using Chroma client
+        import chromadb
+        client = chromadb.PersistentClient(path=chroma_dir)
+        try:
+            client.delete_collection("logseq_docs")
+        except Exception:
+            pass  # Collection might not exist
+        
+        # Create fresh collection
         vector_store = Chroma(
             collection_name="logseq_docs",
             embedding_function=get_embeddings(),

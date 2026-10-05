@@ -17,14 +17,17 @@ from config import config
 from services.graph_config import get_graph_manager
 
 
-def build_context(docs: List[Document]) -> str:
-    """Build context string from documents."""
+def build_context(docs) -> str:
+    """Build context string from documents (Document or SearchResult)."""
     context = []
     for i, doc in enumerate(docs, start=1):
+        # Handle both Document and SearchResult
+        content = getattr(doc, 'page_content', getattr(doc, 'content', ''))
+        metadata = getattr(doc, 'metadata', {})
         context.append(
             f"[Source {i}]\n"
-            f"Source: {doc.metadata.get('source', 'Unknown')}\n"
-            f"{doc.page_content}"
+            f"Source: {metadata.get('source', 'Unknown')}\n"
+            f"{content}"
         )
     return "\n\n".join(context)
 
