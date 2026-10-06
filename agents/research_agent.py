@@ -33,6 +33,7 @@ class ResearchState(TypedDict):
     sufficient: bool
     final_answer: Optional[str]
     provider: str
+    model: Optional[str]
 
 
 # ---- Nodes ----
@@ -41,7 +42,7 @@ def research_agent_node(state: ResearchState) -> Dict[str, Any]:
     """
     Research agent decides what tool to call next based on current evidence.
     """
-    llm = get_llm(state["provider"])
+    llm = get_llm(state["provider"], state.get("model"))
     tools = get_all_tools()
     llm_with_tools = llm.bind_tools(tools)
     
@@ -117,7 +118,7 @@ def evaluate_research_node(state: ResearchState) -> Dict[str, Any]:
     """
     Evaluate if the research has gathered sufficient evidence.
     """
-    llm = get_llm(state["provider"])
+    llm = get_llm(state["provider"], state.get("model"))
     
     # Build context from all gathered evidence
     context_parts = []
@@ -174,7 +175,7 @@ def generate_final_answer_node(state: ResearchState) -> Dict[str, Any]:
     from agents.prompts import FINAL_ANSWER_PROMPT
     from rag import RAGResponse
     
-    llm = get_llm(state["provider"])
+    llm = get_llm(state["provider"], state.get("model"))
     structured_llm = llm.with_structured_output(RAGResponse)
     
     # Build complete context
@@ -273,7 +274,8 @@ def run_research(
     search_query: str,
     initial_documents: List[SearchResult],
     provider: str,
-    max_iterations: int = None
+    max_iterations: int = None,
+    model: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Run the research agent subgraph.
@@ -296,7 +298,8 @@ def run_research(
         research_activity=["Initial hybrid search"],
         sufficient=False,
         final_answer=None,
-        provider=provider
+        provider=provider,
+        model=model
     )
     
     result = subgraph.invoke(initial_state)

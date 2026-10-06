@@ -35,23 +35,38 @@ load_dotenv()
 
 # ---- LLM Provider Abstraction ----
 
-def get_llm(provider: str):
+def get_llm(provider: str, model: Optional[str] = None):
     """Get LLM instance for the given provider."""
     if provider == "Ollama":
         return ChatOllama(
-            model=config.ollama_model,
+            model=model or config.ollama_model,
             temperature=0
         )
     elif provider == "OpenRouter":
         if not config.openrouter_api_key:
             raise ValueError("OPENROUTER_API_KEY not set in environment")
         return ChatOpenRouter(
-            model=config.openrouter_model,
+            model=model or config.openrouter_model,
             temperature=0,
             api_key=config.openrouter_api_key
         )
     else:
         raise ValueError(f"Unknown provider: {provider}")
+
+
+def get_ollama_models() -> List[str]:
+    """Fetch list of installed Ollama models from local API."""
+    import requests
+    try:
+        # Default Ollama API endpoint
+        ollama_host = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+        response = requests.get(f"{ollama_host}/api/tags", timeout=5)
+        response.raise_for_status()
+        data = response.json()
+        models = [m["name"] for m in data.get("models", [])]
+        return sorted(models)
+    except Exception:
+        return []
 
 
 # ---- Structured Output ----

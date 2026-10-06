@@ -12,6 +12,7 @@ from graph import rag_graph
 from config import config
 from services import get_index_stats, sync_graph, check_graph_changes, init_graph_manager, get_graph_manager
 from agents import run_research
+from rag import get_ollama_models
 
 
 # ---- Page Configuration ----
@@ -47,6 +48,12 @@ def init_session_state():
     
     if "last_sync_result" not in st.session_state:
         st.session_state.last_sync_result = None
+    
+    if "ollama_model" not in st.session_state:
+        st.session_state.ollama_model = config.ollama_model
+    
+    if "ollama_models" not in st.session_state:
+        st.session_state.ollama_models = []
 
 
 init_session_state()
@@ -141,10 +148,38 @@ with st.sidebar:
         key="provider_select"
     )
     
+    # Model selection
     if provider == "Ollama":
         st.caption("Runs locally via Ollama")
+        
+        # Fetch models button
+        col1, col2 = st.columns([3, 1])
+        with col2:
+            if st.button("Refresh", key="refresh_models_btn", use_container_width=True):
+                with st.spinner("Fetching models..."):
+                    st.session_state.ollama_models = get_ollama_models()
+        
+        # Show model dropdown if models are available
+        if st.session_state.ollama_models:
+            # Ensure current selection is in the list, otherwise default to first
+            current_model = st.session_state.ollama_model
+            if current_model not in st.session_state.ollama_models:
+                current_model = st.session_state.ollama_models[0]
+                st.session_state.ollama_model = current_model
+            
+            selected_model = st.selectbox(
+                "Model",
+                st.session_state.ollama_models,
+                index=st.session_state.ollama_models.index(current_model),
+                key="ollama_model_select"
+            )
+            st.session_state.ollama_model = selected_model
+        else:
+            st.warning("No Ollama models found. Click Refresh or check if Ollama is running.")
+            st.session_state.ollama_model = config.ollama_model
     else:
         st.caption("Uses cloud model via OpenRouter")
+        st.session_state.ollama_model = config.openrouter_model
     
     st.divider()
     
@@ -311,6 +346,9 @@ if prompt := st.chat_input("Ask your Logseq notes..."):
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             try:
+                # Determine model to use
+                selected_model = st.session_state.ollama_model if provider == "Ollama" else None
+                
                 result = rag_graph.invoke({
                     "question": prompt,
                     "search_query": "",
@@ -323,7 +361,8 @@ if prompt := st.chat_input("Ask your Logseq notes..."):
                     "research_iterations": 0,
                     "research_activity": [],
                     "context_sufficient": False,
-                    "researched": False
+                    "researched": False,
+                    "model": selected_model
                 })
                 
                 answer = result["answer"]

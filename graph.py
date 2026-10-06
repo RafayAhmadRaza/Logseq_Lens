@@ -41,6 +41,7 @@ class RAGState(TypedDict):
     context_sufficient: bool
     researched: bool
     needs_retrieval: bool
+    model: Optional[str]
 
 
 # ---- Nodes ----
@@ -52,7 +53,7 @@ def rewrite_query_node(state: RAGState) -> dict:
         for message in state["messages"]
     )
     
-    llm = get_llm(state["provider"])
+    llm = get_llm(state["provider"], state.get("model"))
     query_rewriter = QUERY_REWRITE_PROMPT | llm | StrOutputParser()
     
     search_query = query_rewriter.invoke({
@@ -74,7 +75,7 @@ def retrieve_node(state: RAGState) -> dict:
 
 def classify_question_node(state: RAGState) -> dict:
     """Classify whether the question needs Logseq retrieval or can be answered directly."""
-    llm = get_llm(state["provider"])
+    llm = get_llm(state["provider"], state.get("model"))
     
     classify_prompt = """Classify the user's question:
 
@@ -110,7 +111,7 @@ Respond with ONLY: NEEDS_RETRIEVAL or NO_RETRIEVAL_NEEDED"""
 
 def generate_direct_node(state: RAGState) -> dict:
     """Generate answer without Logseq context (for meta-questions)."""
-    llm = get_llm(state["provider"])
+    llm = get_llm(state["provider"], state.get("model"))
     
     direct_prompt = """You are a helpful AI assistant. Answer the user's question directly.
 
@@ -148,7 +149,7 @@ def evaluate_context_node(state: RAGState) -> dict:
         return {"context_sufficient": False, "researched": True}
     
     # Use LLM to evaluate
-    llm = get_llm(state["provider"])
+    llm = get_llm(state["provider"], state.get("model"))
     
     context_str = build_context(state["documents"])
     
@@ -184,7 +185,8 @@ def research_node(state: RAGState) -> dict:
         search_query=state["search_query"],
         initial_documents=state["documents"],
         provider=state["provider"],
-        max_iterations=max_iterations
+        max_iterations=max_iterations,
+        model=state.get("model")
     )
     
     return {
@@ -221,7 +223,7 @@ def generate_node(state: RAGState) -> dict:
     # Direct RAG generation
     context = build_context(state["documents"])
     
-    rag_chain = get_llm(state["provider"]).with_structured_output(RAGResponse)
+    rag_chain = get_llm(state["provider"], state.get("model")).with_structured_output(RAGResponse)
     
     # Use the same prompt as in rag.py
     prompt = ChatPromptTemplate.from_messages([
