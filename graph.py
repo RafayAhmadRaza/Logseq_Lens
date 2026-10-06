@@ -40,6 +40,7 @@ class RAGState(TypedDict):
     research_activity: List[str]
     context_sufficient: bool
     researched: bool
+    needs_retrieval: bool
 
 
 # ---- Nodes ----
@@ -68,6 +69,71 @@ def retrieve_node(state: RAGState) -> dict:
     return {
         "documents": documents,
         "research_activity": ["Initial hybrid search"]
+    }
+
+
+def classify_question_node(state: RAGState) -> dict:
+    """Classify whether the question needs Logseq retrieval or can be answered directly."""
+    llm = get_llm(state["provider"])
+    
+    classify_prompt = """Classify the user's question:
+
+Question: {question}
+
+Categories:
+- NEEDS_RETRIEVAL: Requires searching the user's Logseq notes (personal knowledge, facts from notes, specific topics the user has written about)
+- NO_RETRIEVAL_NEEDED: Questions about the AI itself, greetings, general knowledge not specific to user's notes
+
+Examples of NO_RETRIEVAL_NEEDED:
+- "What is your model name?"
+- "What is your purpose?"
+- "Hello"
+- "How are you?"
+- "What can you do?"
+- "Who are you?"
+
+Examples of NEEDS_RETRIEVAL:
+- "What notes do I have about LangGraph?"
+- "Find my notes about vector databases"
+- "What did I write about project X?"
+- "Summarize my meeting notes from last week"
+
+Respond with ONLY: NEEDS_RETRIEVAL or NO_RETRIEVAL_NEEDED"""
+
+    response = llm.invoke([HumanMessage(content=classify_prompt.format(question=state["question"]))])
+    classification = response.content.strip().upper()
+    
+    needs_retrieval = "NEEDS_RETRIEVAL" in classification
+    
+    return {"needs_retrieval": needs_retrieval}
+
+
+def generate_direct_node(state: RAGState) -> dict:
+    """Generate answer without Logseq context (for meta-questions)."""
+    llm = get_llm(state["provider"])
+    
+    direct_prompt = """You are a helpful AI assistant. Answer the user's question directly.
+
+Do not reference Logseq notes or sources. Answer based on your general knowledge or your identity as an AI assistant.
+
+Question: {question}"""
+
+    response = llm.invoke([HumanMessage(content=direct_prompt.format(question=state["question"]))])
+    
+    # Wrap in RAGResponse for consistency
+    answer_obj = RAGResponse(
+        answer=response.content,
+        sufficient_context=True,
+        sources=[]
+    )
+    
+    return {
+        "answer": answer_obj,
+        "messages": [
+            HumanMessage(content=state["question"]),
+            AIMessage(content=response.content)
+        ],
+        "research_activity": ["Direct answer (no retrieval needed)"]
     }
 
 
@@ -201,16 +267,35 @@ Context:
 
 # ---- Graph Construction ----
 
+def route_after_classify(state: RAGState) -> Literal["retrieve", "generate_direct"]:
+    """Route to retrieval or direct generation based on classification."""
+    if state.get("needs_retrieval", True):
+        return "retrieve"
+    return "generate_direct"
+
+
 graph = StateGraph(RAGState)
 
 graph.add_node("rewrite_query", rewrite_query_node)
+graph.add_node("classify_question", classify_question_node)
 graph.add_node("retrieve", retrieve_node)
 graph.add_node("evaluate_context", evaluate_context_node)
 graph.add_node("research", research_node)
 graph.add_node("generate", generate_node)
+graph.add_node("generate_direct", generate_direct_node)
 
 graph.add_edge(START, "rewrite_query")
-graph.add_edge("rewrite_query", "retrieve")
+graph.add_edge("rewrite_query", "classify_question")
+
+graph.add_conditional_edges(
+    "classify_question",
+    route_after_classify,
+    {
+        "retrieve": "retrieve",
+        "generate_direct": "generate_direct"
+    }
+)
+
 graph.add_edge("retrieve", "evaluate_context")
 
 graph.add_conditional_edges(
@@ -224,6 +309,7 @@ graph.add_conditional_edges(
 
 graph.add_edge("research", "generate")
 graph.add_edge("generate", END)
+graph.add_edge("generate_direct", END)
 
 rag_graph = graph.compile()
 
