@@ -15,6 +15,29 @@ from agents import run_research
 from rag import get_ollama_models
 
 
+def format_sources(documents: List[Any]) -> List[Dict[str, Any]]:
+    """Format documents for display."""
+    sources = []
+    for i, doc in enumerate(documents, 1):
+        source_path = doc.metadata.get("source", "Unknown")
+        source_name = Path(source_path).name
+        # Handle both Document and SearchResult
+        content = getattr(doc, 'page_content', getattr(doc, 'content', ''))
+        sources.append({
+            "index": i,
+            "stable_id": doc.metadata.get("stable_id", ""),
+            "source": source_path,
+            "source_name": source_name,
+            "chunk_index": doc.metadata.get("chunk_index", 0),
+            "content": content,
+            "score": doc.metadata.get("search_score", doc.metadata.get("rrf_score")),
+            "tags": doc.metadata.get("tags", ""),
+            "page_links": doc.metadata.get("page_links", ""),
+            "journal_date": doc.metadata.get("journal_date", ""),
+        })
+    return sources
+
+
 # ---- Page Configuration ----
 
 st.set_page_config(
@@ -176,29 +199,6 @@ def run_sync(full: bool = False):
         result = sync_graph(full=full)
         st.session_state.last_sync_result = result
     st.rerun()
-
-
-def format_sources(documents: List[Any]) -> List[Dict[str, Any]]:
-    """Format documents for display."""
-    sources = []
-    for i, doc in enumerate(documents, 1):
-        source_path = doc.metadata.get("source", "Unknown")
-        source_name = Path(source_path).name
-        # Handle both Document and SearchResult
-        content = getattr(doc, 'page_content', getattr(doc, 'content', ''))
-        sources.append({
-            "index": i,
-            "stable_id": doc.metadata.get("stable_id", ""),
-            "source": source_path,
-            "source_name": source_name,
-            "chunk_index": doc.metadata.get("chunk_index", 0),
-            "content": content,
-            "score": doc.metadata.get("search_score", doc.metadata.get("rrf_score")),
-            "tags": doc.metadata.get("tags", ""),
-            "page_links": doc.metadata.get("page_links", ""),
-            "journal_date": doc.metadata.get("journal_date", ""),
-        })
-    return sources
 
 
 # ---- Sidebar ----
