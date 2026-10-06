@@ -54,9 +54,76 @@ def init_session_state():
     
     if "ollama_models" not in st.session_state:
         st.session_state.ollama_models = []
+    
+    # Generation state
+    if "generating" not in st.session_state:
+        st.session_state.generating = False
+    
+    if "pending_prompt" not in st.session_state:
+        st.session_state.pending_prompt = None
 
 
 init_session_state()
+
+
+# ---- Handle Pending Generation (runs before sidebar renders) ----
+if st.session_state.generating and st.session_state.pending_prompt:
+    prompt = st.session_state.pending_prompt
+    st.session_state.pending_prompt = None
+    
+    # Prepare graph messages
+    graph_messages = []
+    for message in st.session_state.messages:
+        if message["role"] == "user":
+            graph_messages.append(HumanMessage(content=message["content"]))
+        elif message["role"] == "assistant":
+            graph_messages.append(AIMessage(content=message["content"]))
+    
+    # Generate response
+    try:
+        selected_model = st.session_state.ollama_model if st.session_state.get("provider_select") == "Ollama" else None
+        
+        result = rag_graph.invoke({
+            "question": prompt,
+            "search_query": "",
+            "documents": [],
+            "answer": None,
+            "messages": graph_messages,
+            "provider": st.session_state.get("provider_select", "Ollama"),
+            "research_enabled": st.session_state.research_enabled,
+            "logseq_path": st.session_state.current_graph_path,
+            "research_iterations": 0,
+            "research_activity": [],
+            "context_sufficient": False,
+            "researched": False,
+            "model": selected_model
+        })
+        
+        answer = result["answer"]
+        sources = format_sources(result.get("documents", []))
+        research_activity = result.get("research_activity", [])
+        researched = result.get("researched", False)
+        
+        # Store assistant message with metadata
+        assistant_msg = {
+            "role": "assistant",
+            "content": answer.answer,
+            "sources": sources,
+            "research_activity": research_activity,
+            "researched": researched,
+            "sufficient_context": answer.sufficient_context
+        }
+        st.session_state.messages.append(assistant_msg)
+        
+    except Exception as e:
+        st.session_state.messages.append({
+            "role": "assistant",
+            "content": f"Error: {str(e)}"
+        })
+    
+    # Generation complete
+    st.session_state.generating = False
+    st.rerun()
 
 
 # ---- Helper Functions ----
@@ -145,7 +212,8 @@ with st.sidebar:
         "Provider",
         ["Ollama", "OpenRouter"],
         index=0,
-        key="provider_select"
+        key="provider_select",
+        disabled=st.session_state.generating
     )
     
     # Model selection
@@ -155,7 +223,7 @@ with st.sidebar:
         # Fetch models button
         col1, col2 = st.columns([3, 1])
         with col2:
-            if st.button("Refresh", key="refresh_models_btn", use_container_width=True):
+            if st.button("Refresh", key="refresh_models_btn", use_container_width=True, disabled=st.session_state.generating):
                 with st.spinner("Fetching models..."):
                     st.session_state.ollama_models = get_ollama_models()
         
@@ -171,7 +239,8 @@ with st.sidebar:
                 "Model",
                 st.session_state.ollama_models,
                 index=st.session_state.ollama_models.index(current_model),
-                key="ollama_model_select"
+                key="ollama_model_select",
+                disabled=st.session_state.generating
             )
             st.session_state.ollama_model = selected_model
         else:
@@ -188,7 +257,8 @@ with st.sidebar:
     research_enabled = st.checkbox(
         "Enable deep research",
         value=st.session_state.research_enabled,
-        help="Allow agentic research with multiple search iterations for complex questions"
+        help="Allow agentic research with multiple search iterations for complex questions",
+        disabled=st.session_state.generating
     )
     st.session_state.research_enabled = research_enabled
     
@@ -198,7 +268,8 @@ with st.sidebar:
             min_value=1,
             max_value=10,
             value=st.session_state.max_iterations,
-            key="max_iter_input"
+            key="max_iter_input",
+            disabled=st.session_state.generating
         )
         st.session_state.max_iterations = max_iter
     
@@ -212,15 +283,16 @@ with st.sidebar:
         "Graph path",
         value=st.session_state.current_graph_path,
         key="graph_path_input",
-        help="Path to your Logseq graph directory"
+        help="Path to your Logseq graph directory",
+        disabled=st.session_state.generating
     )
     
     col1, col2 = st.columns(2)
     with col1:
-        if st.button("Apply Graph", key="apply_graph_btn", use_container_width=True):
+        if st.button("Apply Graph", key="apply_graph_btn", use_container_width=True, disabled=st.session_state.generating):
             apply_graph_path(st.session_state.graph_path_input)
     with col2:
-        if st.button("Validate", key="validate_graph_btn", use_container_width=True):
+        if st.button("Validate", key="validate_graph_btn", use_container_width=True, disabled=st.session_state.generating):
             is_valid, error = validate_graph_path(st.session_state.graph_path_input)
             if is_valid:
                 st.sidebar.success("Valid Logseq graph")
@@ -254,10 +326,10 @@ with st.sidebar:
     # Sync buttons
     col1, col2 = st.columns(2)
     with col1:
-        if st.button("Resync", key="resync_btn", use_container_width=True):
+        if st.button("Resync", key="resync_btn", use_container_width=True, disabled=st.session_state.generating):
             run_sync(full=False)
     with col2:
-        if st.button("Rebuild", key="rebuild_btn", use_container_width=True, type="secondary"):
+        if st.button("Rebuild", key="rebuild_btn", use_container_width=True, type="secondary", disabled=st.session_state.generating):
             if st.session_state.get("confirm_rebuild", False):
                 run_sync(full=True)
                 st.session_state.confirm_rebuild = False
@@ -281,7 +353,8 @@ with st.sidebar:
         min_value=1,
         max_value=20,
         value=st.session_state.top_k,
-        key="top_k_input"
+        key="top_k_input",
+        disabled=st.session_state.generating
     )
     st.session_state.top_k = top_k
     
@@ -327,67 +400,11 @@ for message in st.session_state.messages:
 
 
 # Chat input
-if prompt := st.chat_input("Ask your Logseq notes..."):
+if prompt := st.chat_input("Ask your Logseq notes...", disabled=st.session_state.generating):
     # Add user message
     st.session_state.messages.append({"role": "user", "content": prompt})
     
-    with st.chat_message("user"):
-        st.markdown(prompt)
-    
-    # Prepare graph messages
-    graph_messages = []
-    for message in st.session_state.messages:
-        if message["role"] == "user":
-            graph_messages.append(HumanMessage(content=message["content"]))
-        elif message["role"] == "assistant":
-            graph_messages.append(AIMessage(content=message["content"]))
-    
-    # Generate response
-    with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
-            try:
-                # Determine model to use
-                selected_model = st.session_state.ollama_model if provider == "Ollama" else None
-                
-                result = rag_graph.invoke({
-                    "question": prompt,
-                    "search_query": "",
-                    "documents": [],
-                    "answer": None,
-                    "messages": graph_messages,
-                    "provider": provider,
-                    "research_enabled": st.session_state.research_enabled,
-                    "logseq_path": st.session_state.current_graph_path,
-                    "research_iterations": 0,
-                    "research_activity": [],
-                    "context_sufficient": False,
-                    "researched": False,
-                    "model": selected_model
-                })
-                
-                answer = result["answer"]
-                sources = format_sources(result.get("documents", []))
-                research_activity = result.get("research_activity", [])
-                researched = result.get("researched", False)
-                
-                st.markdown(answer.answer)
-                
-                # Store assistant message with metadata
-                assistant_msg = {
-                    "role": "assistant",
-                    "content": answer.answer,
-                    "sources": sources,
-                    "research_activity": research_activity,
-                    "researched": researched,
-                    "sufficient_context": answer.sufficient_context
-                }
-                st.session_state.messages.append(assistant_msg)
-                
-            except Exception as e:
-                st.error(f"Error: {str(e)}")
-                st.session_state.messages.append({
-                    "role": "assistant",
-                    "content": f"Error: {str(e)}"
-                })
-    
+    # Set generation state and rerun
+    st.session_state.generating = True
+    st.session_state.pending_prompt = prompt
     st.rerun()
