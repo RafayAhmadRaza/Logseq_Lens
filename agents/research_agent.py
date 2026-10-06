@@ -223,6 +223,14 @@ def generate_final_answer_node(state: ResearchState) -> Dict[str, Any]:
 
 # ---- Research Subgraph ----
 
+def route_after_agent(state: ResearchState) -> Literal["execute_tools", "generate_final"]:
+    """Route to tools if LLM called them, otherwise generate final answer."""
+    last_message = state["messages"][-1]
+    if hasattr(last_message, "tool_calls") and last_message.tool_calls:
+        return "execute_tools"
+    return "generate_final"
+
+
 def create_research_subgraph() -> StateGraph:
     """Create the research agent subgraph."""
     workflow = StateGraph(ResearchState)
@@ -233,7 +241,14 @@ def create_research_subgraph() -> StateGraph:
     workflow.add_node("generate_final", generate_final_answer_node)
     
     workflow.add_edge(START, "research_agent")
-    workflow.add_edge("research_agent", "execute_tools")
+    workflow.add_conditional_edges(
+        "research_agent",
+        route_after_agent,
+        {
+            "execute_tools": "execute_tools",
+            "generate_final": "generate_final"
+        }
+    )
     workflow.add_edge("execute_tools", "evaluate_research")
     
     workflow.add_conditional_edges(
