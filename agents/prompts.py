@@ -85,6 +85,8 @@ Use the conversation history to resolve references such as:
 - the previous one, the haiku, the project
 - this, these, those
 
+IMPORTANT: Preserve all key entities (names, places, specific terms, technical terms) from the original question in the rewritten query. Do not generalize or paraphrase away specific entities.
+
 If the question is already standalone, return it unchanged.
 
 Return only the search query. Do not answer the question."""
