@@ -49,19 +49,19 @@ def format_sources(documents: List[Any]) -> List[Dict[str, Any]]:
 def get_node_display_name(node_name: str) -> str:
     """Map internal node names to human-readable display names."""
     node_names = {
-        "rewrite_query": "🔄 Rewriting query",
-        "classify_question": "🎯 Classifying question",
-        "retrieve": "🔍 Retrieving documents",
-        "evaluate_context": "📊 Evaluating context",
-        "research": "🔬 Deep research",
-        "generate": "✍️ Generating answer",
-        "generate_direct": "💬 Direct answer",
-        "research_agent": "🤖 Research agent thinking",
-        "execute_tools": "🔧 Executing tools",
-        "evaluate_research": "📋 Evaluating research",
-        "generate_final": "📝 Finalizing answer",
+        "rewrite_query": "Rewriting query",
+        "classify_question": "Classifying question",
+        "retrieve": "Retrieving documents",
+        "evaluate_context": "Evaluating context",
+        "research": "Deep research",
+        "generate": "Generating answer",
+        "generate_direct": "Direct answer",
+        "research_agent": "Research agent thinking",
+        "execute_tools": "Executing tools",
+        "evaluate_research": "Evaluating research",
+        "generate_final": "Finalizing answer",
     }
-    return node_names.get(node_name, f"⚙️ {node_name}")
+    return node_names.get(node_name, f"Processing: {node_name}")
 
 
 def extract_prompt_from_node(node_name: str, state: Dict[str, Any]) -> str:
@@ -133,67 +133,12 @@ def init_session_state():
 init_session_state()
 
 
-# ---- Session State Initialization ----
-
-def init_session_state():
-    """Initialize Streamlit session state."""
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
-    
-    if "graph_manager" not in st.session_state:
-        st.session_state.graph_manager = init_graph_manager(config.logseq_path)
-    
-    if "current_graph_path" not in st.session_state:
-        st.session_state.current_graph_path = config.logseq_path
-    
-    if "research_enabled" not in st.session_state:
-        st.session_state.research_enabled = True
-    
-    if "top_k" not in st.session_state:
-        st.session_state.top_k = config.default_top_k
-    
-    if "max_iterations" not in st.session_state:
-        st.session_state.max_iterations = config.max_research_iterations
-    
-    if "last_sync_result" not in st.session_state:
-        st.session_state.last_sync_result = None
-    
-    if "ollama_model" not in st.session_state:
-        st.session_state.ollama_model = config.ollama_model
-    
-    if "ollama_models" not in st.session_state:
-        st.session_state.ollama_models = []
-    
-    # Generation state
-    if "generating" not in st.session_state:
-        st.session_state.generating = False
-    
-    if "pending_prompt" not in st.session_state:
-        st.session_state.pending_prompt = None
-    
-    # Streaming state
-    if "stream_state" not in st.session_state:
-        st.session_state.stream_state = {
-            "active": False,
-            "current_node": None,
-            "node_output": None,
-            "final_answer": None,
-            "sources": [],
-            "research_activity": [],
-            "researched": False,
-            "error": None,
-        }
-
-
-init_session_state()
-
-
 # ---- Handle Pending Generation (runs before sidebar renders) ----
 if st.session_state.generating and st.session_state.pending_prompt:
     prompt = st.session_state.pending_prompt
     st.session_state.pending_prompt = None
     
-    # Initialize stream state
+    # Initialize stream state, preserving the prompt
     st.session_state.stream_state = {
         "active": True,
         "current_node": "starting",
@@ -203,6 +148,7 @@ if st.session_state.generating and st.session_state.pending_prompt:
         "research_activity": [],
         "researched": False,
         "error": None,
+        "prompt": prompt,
     }
     st.rerun()
 
@@ -544,7 +490,7 @@ st.caption("Ask questions about your Logseq notes.")
 if st.session_state.stream_state.get("active", False):
     with st.container():
         st.markdown("---")
-        st.subheader("🔄 Generation in Progress")
+        st.subheader("Generation in Progress")
         
         current_node = st.session_state.stream_state.get("current_node")
         if current_node:
@@ -610,7 +556,7 @@ for message in st.session_state.messages:
 
 
 # ---- Developer Prompt Inspection Panel ----
-with st.expander("🔧 Developer: Prompt Inspection", expanded=False):
+with st.expander("Developer Tools: Prompt Inspection", expanded=False):
     st.caption("Shows prompts sent to LLM at each node during the last generation")
     
     if st.session_state.stream_state.get("node_output"):
@@ -662,7 +608,6 @@ with st.expander("🔧 Developer: Prompt Inspection", expanded=False):
         # Show full state for debugging
         st.markdown("---")
         st.markdown("**Full stream state (JSON):**")
-        import json
         # Filter out non-serializable objects
         debug_state = {k: v for k, v in st.session_state.stream_state.items() 
                       if k not in ["node_output", "final_answer"]}
