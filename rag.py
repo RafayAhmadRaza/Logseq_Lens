@@ -12,6 +12,9 @@ from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_openrouter import ChatOpenRouter
 from langchain_ollama import ChatOllama
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_openai import ChatOpenAI
+from langchain_anthropic import ChatAnthropic
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from pydantic import BaseModel, Field
@@ -49,6 +52,30 @@ def get_llm(provider: str, model: Optional[str] = None):
             model=model or config.openrouter_model,
             temperature=0,
             api_key=config.openrouter_api_key
+        )
+    elif provider == "Gemini":
+        if not config.google_api_key:
+            raise ValueError("GOOGLE_API_KEY not set in environment")
+        return ChatGoogleGenerativeAI(
+            model=model or config.gemini_model,
+            temperature=0,
+            google_api_key=config.google_api_key
+        )
+    elif provider == "OpenAI":
+        if not config.openai_api_key:
+            raise ValueError("OPENAI_API_KEY not set in environment")
+        return ChatOpenAI(
+            model=model or config.openai_model,
+            temperature=0,
+            api_key=config.openai_api_key
+        )
+    elif provider == "Anthropic":
+        if not config.anthropic_api_key:
+            raise ValueError("ANTHROPIC_API_KEY not set in environment")
+        return ChatAnthropic(
+            model=model or config.anthropic_model,
+            temperature=0,
+            api_key=config.anthropic_api_key
         )
     else:
         raise ValueError(f"Unknown provider: {provider}")

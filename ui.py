@@ -128,6 +128,20 @@ def init_session_state():
     
     if "pending_prompt" not in st.session_state:
         st.session_state.pending_prompt = None
+    
+    # Streaming state
+    if "stream_state" not in st.session_state:
+        st.session_state.stream_state = {
+            "active": False,
+            "current_node": None,
+            "node_output": None,
+            "final_answer": None,
+            "sources": [],
+            "research_activity": [],
+            "researched": False,
+            "error": None,
+            "prompt": "",
+        }
 
 
 init_session_state()
@@ -334,6 +348,16 @@ with st.sidebar:
         disabled=st.session_state.generating
     )
     
+    # LLM Provider
+    st.subheader("LLM Provider")
+    provider = st.selectbox(
+        "Provider",
+        ["Ollama", "OpenRouter", "Gemini", "OpenAI", "Anthropic"],
+        index=0,
+        key="provider_select",
+        disabled=st.session_state.generating
+    )
+    
     # Model selection
     if provider == "Ollama":
         st.caption("Runs locally via Ollama")
@@ -364,6 +388,40 @@ with st.sidebar:
         else:
             st.warning("No Ollama models found. Click Refresh or check if Ollama is running.")
             st.session_state.ollama_model = config.ollama_model
+    
+    elif provider == "Gemini":
+        st.caption("Google Gemini API")
+        selected_model = st.selectbox(
+            "Model",
+            ["gemini-1.5-pro", "gemini-1.5-flash", "gemini-1.0-pro"],
+            index=0,
+            key="gemini_model_select",
+            disabled=st.session_state.generating
+        )
+        st.session_state.ollama_model = selected_model
+    
+    elif provider == "OpenAI":
+        st.caption("OpenAI API")
+        selected_model = st.selectbox(
+            "Model",
+            ["gpt-4o", "gpt-4o-mini", "gpt-4-turbo", "gpt-3.5-turbo"],
+            index=1,
+            key="openai_model_select",
+            disabled=st.session_state.generating
+        )
+        st.session_state.ollama_model = selected_model
+    
+    elif provider == "Anthropic":
+        st.caption("Anthropic API")
+        selected_model = st.selectbox(
+            "Model",
+            ["claude-3-5-sonnet-20241022", "claude-3-5-haiku-20241022", "claude-3-opus-20240229", "claude-3-sonnet-20240229", "claude-3-haiku-20240307"],
+            index=1,
+            key="anthropic_model_select",
+            disabled=st.session_state.generating
+        )
+        st.session_state.ollama_model = selected_model
+    
     else:
         st.caption("Uses cloud model via OpenRouter")
         st.session_state.ollama_model = config.openrouter_model
