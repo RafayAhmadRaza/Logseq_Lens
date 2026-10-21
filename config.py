@@ -22,18 +22,6 @@ class Config:
     ollama_model: str = os.getenv("OLLAMA_MODEL", "gemma4:e4b")
     openrouter_model: str = os.getenv("OPENROUTER_MODEL", "openrouter/free")
     openrouter_api_key: Optional[str] = os.getenv("OPENROUTER_API_KEY")
-    
-    # Google Gemini
-    google_api_key: Optional[str] = os.getenv("GOOGLE_API_KEY")
-    gemini_model: str = os.getenv("GEMINI_MODEL", "gemini-1.5-pro")
-    
-    # OpenAI
-    openai_api_key: Optional[str] = os.getenv("OPENAI_API_KEY")
-    openai_model: str = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
-    
-    # Anthropic
-    anthropic_api_key: Optional[str] = os.getenv("ANTHROPIC_API_KEY")
-    anthropic_model: str = os.getenv("ANTHROPIC_MODEL", "claude-3-haiku-20240307")
 
     # Embeddings
     embedding_model: str = os.getenv("EMBEDDING_MODEL", "sentence-transformers/all-mpnet-base-v2")

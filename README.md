@@ -9,7 +9,7 @@ An agentic research assistant for your Logseq knowledge base. Combines tradition
 - **Research Toggle**: Enable/disable deep research per question
 - **Multi-Graph Support**: Switch between Logseq graphs with isolated indexes
 - **MCP Integration**: Expose search, sync, and graph tools via Model Context Protocol
-- **Provider Flexibility**: Local (Ollama) or cloud (OpenRouter, Google Gemini, OpenAI, Anthropic) LLMs
+- **Provider Flexibility**: Local (Ollama) or cloud (OpenRouter) LLMs
 - **Streamlit UI**: Clean chat interface with source display and research traces
 - **Index Management**: Incremental sync, change detection, full rebuild
 
@@ -19,11 +19,6 @@ An agentic research assistant for your Logseq knowledge base. Combines tradition
 - Python 3.10+
 - Ollama running locally (for local LLM)
 - Logseq graph with Markdown files
-- API keys for cloud providers (optional):
-  - Google Gemini: `GOOGLE_API_KEY`
-  - OpenAI: `OPENAI_API_KEY`
-  - Anthropic: `ANTHROPIC_API_KEY`
-  - OpenRouter: `OPENROUTER_API_KEY`
 
 ### Installation
 
@@ -39,28 +34,9 @@ cp .env.example .env  # Edit with your paths
 Edit `.env`:
 ```env
 LOGSEQ_PATH=/home/youruser/Logseq
-
-# Local LLM (Ollama)
 OLLAMA_MODEL=gemma4:e4b
-
-# Cloud Providers (choose one)
-# OpenRouter
 OPENROUTER_API_KEY=sk-or-...
 OPENROUTER_MODEL=openrouter/free
-
-# Google Gemini
-GOOGLE_API_KEY=your_gemini_key
-GEMINI_MODEL=gemini-1.5-pro
-
-# OpenAI
-OPENAI_API_KEY=your_openai_key
-OPENAI_MODEL=gpt-4o-mini
-
-# Anthropic
-ANTHROPIC_API_KEY=your_anthropic_key
-ANTHROPIC_MODEL=claude-3-haiku-20240307
-
-# Research
 MAX_RESEARCH_ITERATIONS=3
 DEFAULT_TOP_K=5
 ```
@@ -189,30 +165,10 @@ Logseq_Lens/
 | `OLLAMA_MODEL` | `gemma4:e4b` | Local model name |
 | `OPENROUTER_MODEL` | `openrouter/free` | Cloud model name |
 | `OPENROUTER_API_KEY` | - | Required for OpenRouter |
-| `GOOGLE_API_KEY` | - | Required for Gemini |
-| `GEMINI_MODEL` | `gemini-1.5-pro` | Gemini model name |
-| `OPENAI_API_KEY` | - | Required for OpenAI |
-| `OPENAI_MODEL` | `gpt-4o-mini` | OpenAI model name |
-| `ANTHROPIC_API_KEY` | - | Required for Anthropic |
-| `ANTHROPIC_MODEL` | `claude-3-haiku-20240307` | Anthropic model name |
 | `EMBEDDING_MODEL` | `all-mpnet-base-v2` | Sentence transformer |
 | `DEFAULT_TOP_K` | `5` | Retrieval results |
 | `MAX_RESEARCH_ITERATIONS` | `3` | Agent iteration limit |
 | `LANGFUSE_*` | - | Observability (optional) |
-
-## Provider Selection
-
-The UI supports 5 LLM providers:
-
-| Provider | Type | Use Case |
-|----------|------|----------|
-| **Ollama** | Local | Free, private, runs on your machine |
-| **OpenRouter** | Cloud | Free/paid models via single API |
-| **Google Gemini** | Cloud | Strong reasoning, large context |
-| **OpenAI** | Cloud | GPT-4o, GPT-4o-mini, etc. |
-| **Anthropic** | Cloud | Claude 3.5 Sonnet/Haiku/Opus |
-
-Select provider in the sidebar. Each provider has its own model dropdown with sensible defaults.
 
 ## Advanced Logseq Features
 
